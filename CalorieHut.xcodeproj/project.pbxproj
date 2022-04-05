@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */; };
-		09AF6D9C27FB81B400D344BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9B27FB81B400D344BF /* ContentView.swift */; };
 		09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6D9D27FB81B600D344BF /* Assets.xcassets */; };
 		09AF6DA127FB81B600D344BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */; };
+		09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAA27FB81FA00D344BF /* HomeView.swift */; };
+		09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAC27FB869200D344BF /* ProgressRingView.swift */; };
+		09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */; };
+		09AF6DB727FBA69000D344BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DB627FBA69000D344BF /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09AF6D9627FB81B400D344BF /* CalorieHut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieHut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutApp.swift; sourceTree = "<group>"; };
-		09AF6D9B27FB81B400D344BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09AF6D9D27FB81B600D344BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09AF6DAA27FB81FA00D344BF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		09AF6DAC27FB869200D344BF /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		09AF6DB627FBA69000D344BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */,
-				09AF6D9B27FB81B400D344BF /* ContentView.swift */,
+				09AF6DA927FB81E800D344BF /* ViewModel */,
+				09AF6DA827FB81E100D344BF /* Model */,
+				09AF6DA727FB81DA00D344BF /* Views */,
 				09AF6D9D27FB81B600D344BF /* Assets.xcassets */,
 				09AF6D9F27FB81B600D344BF /* Preview Content */,
 			);
@@ -65,6 +73,31 @@
 				09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09AF6DA727FB81DA00D344BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09AF6DAA27FB81FA00D344BF /* HomeView.swift */,
+				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
+				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
+				09AF6DB627FBA69000D344BF /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09AF6DA827FB81E100D344BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09AF6DA927FB81E800D344BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,8 @@
 			dependencies = (
 			);
 			name = CalorieHut;
+			packageProductDependencies = (
+			);
 			productName = CalorieHut;
 			productReference = 09AF6D9627FB81B400D344BF /* CalorieHut.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,8 @@
 				Base,
 			);
 			mainGroup = 09AF6D8D27FB81B400D344BF;
+			packageReferences = (
+			);
 			productRefGroup = 09AF6D9727FB81B400D344BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AF6D9C27FB81B400D344BF /* ContentView.swift in Sources */,
+				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
+				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
 				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
+				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,
+				09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
