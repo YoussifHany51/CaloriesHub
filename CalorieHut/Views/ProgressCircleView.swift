@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ProgressCircleView: View {
     
-  //  @State var progress: CGFloat = 0.5
     @State var startAnimation: CGFloat = 0.0
+    
+    @EnvironmentObject var vm : MealViewModel
     
     var body: some View {
         
@@ -18,18 +19,14 @@ struct ProgressCircleView: View {
             let size = proxy.size
 
         ZStack{
-//            Image(systemName: "circle.fill")
-//                .resizable()
-//                .renderingMode(.template)
-//                .aspectRatio(contentMode: .fit)
-//                .foregroundColor(.white)
-//                .scaleEffect(x: 1.1, y: 1)
-//                .offset(y:-1)
-            
-            WaterWave(progress: 0.5, waveHeight: 0.1,
+            WaterWave(
+                progress:
+                Double(vm.getCountKcal()) / 200,
+               // 0.1,
+                waveHeight: 0.03,
                 offset: startAnimation)
                 .fill(Color.blue)
-                .frame(width:250)
+                .frame(width:250,height: 250)
                 .overlay(content: {
                     ZStack{
                         Circle()
@@ -70,8 +67,9 @@ struct ProgressCircleView: View {
         .frame(width: size.width, height: size.height, alignment: .center)
         .onAppear{
             withAnimation(.linear(duration: 2).repeatForever(autoreverses: false)){
-                startAnimation = size.width 
+                startAnimation = size.width
             }
+            
         }
       }
         .frame(height:350)
@@ -81,6 +79,7 @@ struct ProgressCircleView: View {
 struct ProgressCircleView_Previews: PreviewProvider {
     static var previews: some View {
         ProgressCircleView()
+            .environmentObject(MealViewModel())
     }
 }
 //MARK: WATER WAVES
