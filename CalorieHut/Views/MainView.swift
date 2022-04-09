@@ -9,31 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem{
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-            Text("Add Meal")
-                .tabItem{
-                    Image(systemName: "plus")
-                    Text("Add")
-                }
-            Text("Favorite meal")
-                .tabItem{
-                    Image(systemName: "heart")
-                    Text("Favorite")
-                }
-            Text("Profile")
-                .tabItem{
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
 
+            TabView {
+                HomeView()
+                    .tabItem{
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                CategoryGridView()
+                    .tabItem{
+                        Image(systemName: "plus")
+                        Text("Add")
+                    }
+                FavoriteMealView()
+                    .tabItem{
+                        Image(systemName: "heart")
+                        Text("Favorite")
+                    }
+                Text("Profile")
+                    .tabItem{
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }
+            }
         }
-
-    }
 }
 
 struct MainView_Previews: PreviewProvider {
