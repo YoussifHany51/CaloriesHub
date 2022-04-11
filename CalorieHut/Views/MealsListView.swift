@@ -8,13 +8,127 @@
 import SwiftUI
 
 struct MealsListView: View {
+    @State var name:String
+    @State var image:String
+    @State var alertShow:Bool = false
+    
+    @EnvironmentObject var vm : MealViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack (alignment: .bottom){
+                
+                Image(image)
+                    .resizable()
+                    .scaledToFit()
+                    .ignoresSafeArea()
+                    .cornerRadius(20)
+                
+                HStack{
+                    Text(name)
+                        .font(.title)
+                        .fontWeight(.black)
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                }
+            }
+            List{
+                ForEach(vm.checkMealList(text: name, vm: vm)){ meal in
+                    HStack {
+                        VStack (alignment:.leading,spacing:5){
+                            Text(meal.name)
+                                .font(.body)
+                            
+                            HStack {
+                                Text("\(meal.kcal.description)")
+                                    .foregroundColor(.red)
+                                Text("kcal")
+                                Text("per")
+                                Text("\(meal.quantity)")
+                                Text(meal.unit)
+                            }
+                        }
+                        Spacer()
+                        
+                        Group{
+                            //MARK: FAV Button
+                            Button{
+                                
+                                if vm.checkFav(
+                                    name: meal.name,
+                                    list: vm.favoriteMeals) {
+                                    // Alert
+                                    alertShow.toggle()
+                                }
+                                else{
+                                    vm.addMealToFav(
+                                        name: meal.name,
+                                        kcal:meal.kcal,
+                                        quantity: meal.quantity,
+                                        unit: meal.unit)
+                                }
+                            }label: {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(
+                                        vm.checkFav(name: meal.name,
+                                                    list: vm.favoriteMeals) ? .red : .gray
+                                    )
+                                    .padding()
+                                
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .alert(isPresented: $alertShow, content: {
+                                Alert(title:
+                                        Text("This meal is already in your favorite list"))
+                            })
+                            
+                            //MARK: Add button
+                            Button{
+                                vm.addMeal(name: meal.name,
+                                           kcal: meal.kcal,
+                                           quantity: meal.quantity,
+                                           unit: meal.unit)
+                                
+                                vm.setCountKcal(count: meal.kcal)
+                                print("Added")
+                            }label: {
+                                Image(systemName: "plus")
+                                    .padding()
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        .overlay(backButton, alignment: .topLeading)
     }
 }
 
 struct MealsListView_Previews: PreviewProvider {
     static var previews: some View {
-        MealsListView()
+        MealsListView(name: "", image: "")
+            .environmentObject(MealViewModel())
     }
+}
+
+extension MealsListView{
+    private var backButton: some View{
+        Button{
+            vm.showMealsEatenList.toggle()
+        } label:{
+            Image(systemName: "xmark")
+                .font(.headline)
+                .padding(16)
+                .foregroundColor(.black)
+                .background(.ultraThickMaterial)
+                .cornerRadius(10)
+                .shadow(radius: 4)
+                .padding()
+        }
+    }
+    
 }
