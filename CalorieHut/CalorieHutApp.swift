@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CalorieHutApp: App {
+    
+    @StateObject var vm : MealViewModel=MealViewModel()
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(vm)
         }
     }
 }
