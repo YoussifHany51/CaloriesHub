@@ -26,9 +26,9 @@ struct MainView: View {
                         Image(systemName: "heart")
                         Text("Favorite")
                     }
-                Text("Profile")
+                ProfileView()
                     .tabItem{
-                        Image(systemName: "person.fill")
+                        Image(systemName: "person")
                         Text("Profile")
                     }
             }
