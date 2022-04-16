@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressCircleView: View {
     
     @State var startAnimation: CGFloat = 0.0
-    
+    @State var progress : Double = 0.0
     @EnvironmentObject var vm : MealViewModel
     
     var body: some View {
@@ -20,9 +20,11 @@ struct ProgressCircleView: View {
 
         ZStack{
             WaterWave(
-                progress:
-                Double(vm.getCountKcal()) / 200,
-               // 0.1,
+                
+                progress: vm.userKcal.isEmpty ? 0 :
+                   (Double(vm.getCountKcal()) /
+                   (Double(vm.userKcal) ?? 0.0)),
+//                progress:0.5,
                 waveHeight: 0.03,
                 offset: startAnimation)
                 .fill(Color.blue)
@@ -69,7 +71,8 @@ struct ProgressCircleView: View {
             withAnimation(.linear(duration: 2).repeatForever(autoreverses: false)){
                 startAnimation = size.width
             }
-            
+//            progress = min(Double(vm.getCountKcal()) / (Double(vm.userKcal) ?? 0.0) , 1.0)
+            progress = 0.5
         }
       }
         .frame(height:350)
