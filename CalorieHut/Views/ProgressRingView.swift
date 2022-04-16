@@ -20,7 +20,10 @@ struct ProgressRingView: View {
                 .opacity(0.1)
             
             Circle()
-                .trim(from: 0.0, to: min(Double(vm.getCountKcal()) / 200 , 1.0))
+                .trim(from: 0.0, to: min(vm.userKcal.isEmpty ? 0 :
+                                            (Double(vm.getCountKcal()) /
+                                             (Double(vm.userKcal)
+                                             ?? 0.0)) , 1.0))
                 .stroke(AngularGradient(
                 gradient:Gradient(colors: [Color.blue,Color.blue]),
                 center: .center),
@@ -29,14 +32,16 @@ struct ProgressRingView: View {
                 lineCap: .round,
                 lineJoin: .round))
                 .rotationEffect(Angle(degrees: 270))
-                .animation(.easeInOut(duration: 1.0), value: Double(vm.getCountKcal()) / 200)
+                .animation(.easeInOut(duration: 1.0), value:progress) 
         }
         .frame(width:230,height: 250)
         .padding()
-//        .onAppear{
-//            //progress = 0.5
-//           progress = Double(vm.getCountKcal()) / 200
-//        }
+        .onAppear{
+            //progress = 0.5
+           progress = vm.userKcal.isEmpty ? 0 :
+            (Double(vm.getCountKcal()) /
+                   (Double(vm.userKcal) ?? 0.0))
+        }
     }
 }
 
