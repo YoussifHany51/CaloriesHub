@@ -10,42 +10,31 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var showMealSheet: Bool = false
+    @EnvironmentObject private var vm: MealViewModel
     
     var body: some View {
         NavigationView {
             ZStack{
-                Color(.systemCyan).opacity(0.8)
+                Color(.systemBrown).opacity(0.5)
                     .ignoresSafeArea()
                 
                 VStack{
                     ZStack{
                         ProgressRingView()
+                            .padding()
                         ProgressCircleView()
-                    VStack{
-                        Text("50 %")
-                            .fontWeight(.bold)
-                        Text("1200 kcal")
-                            .fontWeight(.bold)
-                    }
+                        
+                    KcalResult
                     .foregroundColor(.white)
                     .font(.title)
                     }
-                    Button{
-                        showMealSheet.toggle()
-                    }label: {
-                        Text("Meal's record")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .frame(width:150,height: 40)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                    }
+                    
+                    MealListButton
                 }
                Spacer()
             }
-            .sheet(isPresented: $showMealSheet, content: {
-                Text("sheet")
+            .sheet(isPresented: $vm.showMealsEatenList, content: {
+                MealsRecordView()
             })
             .navigationTitle("Hello👋")
         }
@@ -55,5 +44,36 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(MealViewModel())
     }
 }
+
+extension HomeView{
+    
+    private var MealListButton: some View{
+        Button{
+            vm.showMealsEatenList.toggle()
+        }label: {
+            Text("Meal's record")
+                .font(.title3)
+                .fontWeight(.semibold)
+                .frame(width:150,height: 40)
+                .background(Color.white)
+                .cornerRadius(10)
+        }
+    }
+    
+    private var KcalResult:some View{
+        VStack{
+            HStack {
+                // format "%.0f" to remove decimal
+                Text(String(format: "%.0f",vm.userKcal.isEmpty ? 0: (vm.getCountKcal() / (Double(vm.userKcal) ?? 0)) * 100 ))
+                    .fontWeight(.bold)
+                Text("%")
+            }
+            Text(String(format: "%.0f",vm.userKcal.isEmpty ? 0: (Double(vm.userKcal) ?? 0) - vm.getCountKcal()))
+                .fontWeight(.bold)
+        }
+    }
+}
+
