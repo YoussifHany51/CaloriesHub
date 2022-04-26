@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension View{
+    func dismissKeyBoard(){
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil,from: nil,for: nil)
+    }
+}
+
+
 struct ProfileView: View {
     
     @EnvironmentObject var vm : MealViewModel
@@ -20,6 +27,8 @@ struct ProfileView: View {
     
     @State var alertTitle:String=""
     @State var showAlert:Bool=false
+    
+    @State var showInfoSheet:Bool=false
     
     
     let genderSelection: [String] = [
@@ -40,12 +49,9 @@ struct ProfileView: View {
                 
                 VStack{
                     VStack{
-                    Text("Use the calorie calculator to estimate the number of daily calories your body needs to maintain, loss or gain weight.")
-                    .font(.headline)
-                    .padding()
+ 
+                        InfoButton
                         
-                        Text("If you're pregnant or breast-feeding, are a competitive athlete, or have a metabolic disease, such as diabetes, the calorie calculator may overestimate or underestimate your actual calorie needs.")
-                            
                         HStack(spacing:10){
                             Text("Age")
                                 .foregroundColor(.blue)
@@ -57,6 +63,7 @@ struct ProfileView: View {
                                 .border(.gray, width: 1.8)
                                 .cornerRadius(10)
                                 .keyboardType(.numberPad)
+                                .submitLabel(.next)
                             Text("years")
                         }
                         .padding()
@@ -71,6 +78,8 @@ struct ProfileView: View {
                                 .frame(width:100,height: 50)
                                 .border(.gray, width: 1.8)
                                 .cornerRadius(10)
+                                .keyboardType(.numberPad)
+                                .submitLabel(.next)
                             Text("cm.")
                         }
                         .padding()
@@ -84,6 +93,9 @@ struct ProfileView: View {
                                 .frame(width:100,height: 50)
                                 .border(.gray, width: 1.8)
                                 .cornerRadius(10)
+                                .keyboardType(.numberPad)
+                                .submitLabel(.done)
+                                
                             Text("kg.")
                         }
                         .padding()
@@ -91,7 +103,7 @@ struct ProfileView: View {
                         Picker(selection:$gender,
                                label:Text("Gender"),
                                content:{
-                            ForEach(genderSelection.indices){ index in
+                            ForEach(genderSelection.indices,id:\.self){ index in
                                 Text(genderSelection[index])
                                     .tag(genderSelection[index])
                             }
@@ -143,7 +155,26 @@ struct ProfileView: View {
                                 Text("daily")
                             }
                         }
-                        
+//                        
+//                        HStack {
+//                            Text("Or enter here:")
+//                            TextField("",text: $vm.userDailyCal)
+//                                .frame(width:80,height: 50)
+//                                .border(.gray, width: 1.8)
+//                            .cornerRadius(10)
+//                            Button{
+//                                vm.addKcal(kcal: vm.userDailyCal)
+//                            }label: {
+//                                Text("Calculate")
+//                                    .foregroundColor(userChecker()
+//                                    ? Color.accentColor
+//                                    : Color.gray)
+//                                    .font(.headline)
+//                                    
+//                                    .padding()
+//                            }
+//                         
+//                        }
                         
                     }
                     .padding()
@@ -153,18 +184,34 @@ struct ProfileView: View {
                 
                 
             }
+            .onTapGesture {
+                self.dismissKeyBoard()
+            }
             .navigationTitle("Calorie Calculator")
             .alert(isPresented: $showAlert, content: getAlert)
+            .sheet(isPresented: $showInfoSheet, content: {
+                InfoSheetView()
+            })
         }
     }
+    
+    
     func textChecker()->Bool{
         if(age.count<2 || weight.count<2 || height.count<3){
-            alertTitle="Invalid input"
+            alertTitle = "Invalid input"
             showAlert.toggle()
             return false
         }
         return true
     }
+//    func userChecker()->Bool{
+//        if(vm.userDailyCal.count<4){
+//            alertTitle = "Invalid input"
+//            showAlert.toggle()
+//            return false
+//        }
+//        return true
+//    }
     
     func getAlert()->Alert{
         return Alert(title: Text(alertTitle))
@@ -176,5 +223,22 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
             .environmentObject(MealViewModel())
+    }
+}
+
+extension ProfileView{
+    
+    private var InfoButton:some View{
+        HStack {
+            Spacer()
+            Button{
+                showInfoSheet.toggle()
+            }label: {
+                Image(systemName: "info.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:30)
+            }
+        }
     }
 }
