@@ -40,7 +40,7 @@ struct CategoryGridView: View {
                                     VStack(spacing: 15){
                                         Text(cat.title)
                                             .foregroundColor(.white)
-                                            .font(.title)
+                                            .font(.title2)
                                             .fontWeight(.bold)
                                     }
                                     .padding()
@@ -59,7 +59,7 @@ struct CategoryGridView: View {
                     }
             }
             }
-            .navigationTitle("Add new meal")
+            .navigationTitle("Add meal")
         }
 }
 
