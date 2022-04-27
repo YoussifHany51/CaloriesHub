@@ -11,29 +11,32 @@ struct FavoriteMealView: View {
     @EnvironmentObject var vm : MealViewModel
     
     var body: some View {
-        if vm.favoriteMeals.isEmpty{
-            Text("No Favorite meals !!")
-                .font(.largeTitle)
-        }
-        else {
-            NavigationView {
-                ZStack {
-                    Color.brown.opacity(0.5)
-                        .ignoresSafeArea()
+        NavigationView {
+            ZStack {
+                Color(.systemBrown).opacity(0.5)
+                    .ignoresSafeArea()
+            if vm.favoriteMeals.isEmpty{
+                Text("No Favorite meals !!")
+                    .font(.largeTitle)
+            }
+            else {
                     VStack {
                         List{
                             ForEach(vm.favoriteMeals){ fav in
                                 HStack{
-                                    Text(fav.name)
-                                    
-                                    HStack {
-                                        Text("\(fav.kcal.description)")
-                                            .foregroundColor(.red)
-                                        Text("kcal")
-                                        Text("per")
-                                        Text("\(fav.quantity)")
-                                        Text(fav.unit)
+                                    VStack(alignment:.leading){
+                                        Text(fav.name)
+                                        
+                                        HStack {
+                                            Text("\(fav.kcal.description)")
+                                                .foregroundColor(.red)
+                                            Text("kcal")
+                                            Text("per")
+                                            Text("\(fav.quantity)")
+                                            Text(fav.unit)
+                                        }
                                     }
+                                    
                                     Spacer()
                                     
                                     Button{
@@ -43,6 +46,7 @@ struct FavoriteMealView: View {
                                                    unit: fav.unit)
                                         vm.setCountKcal(count: fav.kcal)
                                         print("Added")
+                                        SoundManager.instance.playSound()
                                     }label: {
                                         Image(systemName: "plus")
                                             .padding()
@@ -51,8 +55,10 @@ struct FavoriteMealView: View {
                                 }
                             }
                             .onDelete(perform: vm.deleteFavMeal)
+                            .onMove(perform: vm.moveFavMeal)
                         }
                         .navigationTitle("Favorite Meals")
+                        .navigationBarItems(leading: EditButton())
                     }
                 }
             }
