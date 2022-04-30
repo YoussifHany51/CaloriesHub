@@ -14,6 +14,8 @@ struct MealsListView: View {
     
     @EnvironmentObject var vm : MealViewModel
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             ZStack (alignment: .bottom){
@@ -44,7 +46,7 @@ struct MealsListView: View {
                                 Text("\(meal.kcal.description)")
                                     .foregroundColor(.red)
                                 Text("kcal")
-                                Text("per")
+                                Text("/")
                                 Text("\(meal.quantity)")
                                 Text(meal.unit)
                             }
@@ -91,6 +93,8 @@ struct MealsListView: View {
                                            unit: meal.unit)
                                 
                                 vm.setCountKcal(count: meal.kcal)
+                                
+                                SoundManager.instance.playSound()
                                 print("Added")
                             }label: {
                                 Image(systemName: "plus")
@@ -118,12 +122,12 @@ struct MealsListView_Previews: PreviewProvider {
 extension MealsListView{
     private var backButton: some View{
         Button{
-            vm.showMealsEatenList.toggle()
+            presentationMode.wrappedValue.dismiss()
         } label:{
             Image(systemName: "xmark")
                 .font(.headline)
                 .padding(16)
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .background(.ultraThickMaterial)
                 .cornerRadius(10)
                 .shadow(radius: 4)
