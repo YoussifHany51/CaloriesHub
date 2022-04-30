@@ -25,8 +25,21 @@ class CalorieHutTests: XCTestCase {
 
     func testAddMeal(){
         sut?.addMeal(name: "Apple", kcal: 15, quantity: 1, unit: "g")
+        XCTAssertEqual(sut?.meals.first?.name, "Apple")
         XCTAssertEqual(sut?.meals.first?.kcal, 15)
         XCTAssertEqual(sut?.meals.first?.quantity, 1)
         XCTAssertEqual(sut?.meals.first?.unit, "g")
+    }
+    
+    func testAddKcal(){
+        sut?.addKcal(kcal: "10")
+        XCTAssertEqual(sut?.userKcal, "10")
+    }
+    
+    func testAddMealToFav(){
+        sut?.addMealToFav(name: "Orange", kcal: 10, quantity: 1, unit: "g")
+        XCTAssertEqual(sut?.favoriteMeals.first?.kcal, 10)
+        XCTAssertEqual(sut?.favoriteMeals.first?.quantity, 1)
+        XCTAssertEqual(sut?.favoriteMeals.first?.unit, "g")
     }
 }
