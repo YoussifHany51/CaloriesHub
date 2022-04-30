@@ -34,9 +34,13 @@ struct HomeView: View {
                Spacer()
             }
             .sheet(isPresented: $vm.showMealsEatenList, content: {
-                MealsRecordView()
+                MealRecordView()
             })
             .navigationTitle("Hello👋")
+        }
+        .onAppear{
+            NotificationManager.instance.requestAuthorization()
+            UIApplication.shared.applicationIconBadgeNumber = 0
         }
     }
 }
@@ -71,8 +75,13 @@ extension HomeView{
                     .fontWeight(.bold)
                 Text("%")
             }
-            Text(String(format: "%.0f",vm.userKcal.isEmpty ? 0: (Double(vm.userKcal) ?? 0) - vm.getCountKcal()))
-                .fontWeight(.bold)
+            HStack {
+                Text(String(format: "%.0f",vm.userKcal.isEmpty ? 0: (Double(vm.userKcal) ?? 0) - vm.getCountKcal()))
+                    .fontWeight(.bold)
+                Text("Kcal")
+                    .font(.body)
+
+            }
         }
     }
 }
