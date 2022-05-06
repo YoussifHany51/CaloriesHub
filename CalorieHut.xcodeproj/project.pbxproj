@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093A3BC12800FECA00AFA704 /* FavoriteMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */; };
+		093B3D27281CD190009DF71E /* CalorieHutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B3D26281CD190009DF71E /* CalorieHutTests.swift */; };
+		09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09446D36281584FE00B295E7 /* LaunchScreen.storyboard */; };
+		09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09446D3C2815F31200B295E7 /* MealRecordView.swift */; };
+		0986372E2825C50600516CF7 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* CustomTabBarView.swift */; };
+		098637302825C56500516CF7 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabViewModel.swift */; };
+		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
 		09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */; };
 		09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6D9D27FB81B600D344BF /* Assets.xcassets */; };
 		09AF6DA127FB81B600D344BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */; };
@@ -14,10 +21,37 @@
 		09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAC27FB869200D344BF /* ProgressRingView.swift */; };
 		09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */; };
 		09AF6DB727FBA69000D344BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DB627FBA69000D344BF /* MainView.swift */; };
+		09D88869280310D50024B039 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D88868280310D50024B039 /* CalculatorView.swift */; };
+		09E7C8E327FC968C00153CD9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E227FC968C00153CD9 /* Category.swift */; };
+		09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */; };
+		09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E627FCE96B00153CD9 /* Meal.swift */; };
+		09E7C8E927FCEE8F00153CD9 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */; };
+		09E7C8EB27FCF58700153CD9 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8EA27FCF58700153CD9 /* MealsListView.swift */; };
+		09ECA8E7280F71F700F24966 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECA8E6280F71F700F24966 /* SoundManager.swift */; };
+		09ECA8E9280F75A800F24966 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09ECA8E8280F75A800F24966 /* ding.mp3 */; };
+		09ECA8EB280F771200F24966 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECA8EA280F771200F24966 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		093B3D28281CD190009DF71E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09AF6D8E27FB81B400D344BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09AF6D9527FB81B400D344BF;
+			remoteInfo = CalorieHut;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		09AF6D9627FB81B400D344BF /* CalorieHut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieHut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMealView.swift; sourceTree = "<group>"; };
+		093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieHutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		093B3D26281CD190009DF71E /* CalorieHutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutTests.swift; sourceTree = "<group>"; };
+		09446D36281584FE00B295E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
+		0986372D2825C50600516CF7 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		0986372F2825C56500516CF7 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
+		09AF6D9627FB81B400D344BF /* Calorie Hut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Hut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutApp.swift; sourceTree = "<group>"; };
 		09AF6D9D27FB81B600D344BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -25,9 +59,25 @@
 		09AF6DAC27FB869200D344BF /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		09AF6DB627FBA69000D344BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09D88868280310D50024B039 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		09E7C8E227FC968C00153CD9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
+		09E7C8E627FCE96B00153CD9 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		09E7C8EA27FCF58700153CD9 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
+		09ECA8E6280F71F700F24966 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		09ECA8E8280F75A800F24966 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
+		09ECA8EA280F771200F24966 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		093B3D21281CD18F009DF71E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09AF6D9327FB81B400D344BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093B3D25281CD18F009DF71E /* CalorieHutTests */ = {
+			isa = PBXGroup;
+			children = (
+				093B3D26281CD190009DF71E /* CalorieHutTests.swift */,
+			);
+			path = CalorieHutTests;
+			sourceTree = "<group>";
+		};
 		09AF6D8D27FB81B400D344BF = {
 			isa = PBXGroup;
 			children = (
 				09AF6D9827FB81B400D344BF /* CalorieHut */,
+				093B3D25281CD18F009DF71E /* CalorieHutTests */,
 				09AF6D9727FB81B400D344BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,7 +108,8 @@
 		09AF6D9727FB81B400D344BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09AF6D9627FB81B400D344BF /* CalorieHut.app */,
+				09AF6D9627FB81B400D344BF /* Calorie Hut.app */,
+				093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +142,14 @@
 				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
 				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
 				09AF6DB627FBA69000D344BF /* MainView.swift */,
+				09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */,
+				09E7C8EA27FCF58700153CD9 /* MealsListView.swift */,
+				093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */,
+				09D88868280310D50024B039 /* CalculatorView.swift */,
+				09A10EAF281053D500BAD70E /* InfoSheetView.swift */,
+				09446D3C2815F31200B295E7 /* MealRecordView.swift */,
+				0986372D2825C50600516CF7 /* CustomTabBarView.swift */,
+				09446D36281584FE00B295E7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,6 +157,11 @@
 		09AF6DA827FB81E100D344BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				09E7C8E227FC968C00153CD9 /* Category.swift */,
+				09E7C8E627FCE96B00153CD9 /* Meal.swift */,
+				09ECA8EA280F771200F24966 /* NotificationManager.swift */,
+				09ECA8E6280F71F700F24966 /* SoundManager.swift */,
+				09ECA8E8280F75A800F24966 /* ding.mp3 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +169,8 @@
 		09AF6DA927FB81E800D344BF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */,
+				0986372F2825C56500516CF7 /* TabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -103,6 +178,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		093B3D23281CD18F009DF71E /* CalorieHutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CalorieHutTests" */;
+			buildPhases = (
+				093B3D20281CD18F009DF71E /* Sources */,
+				093B3D21281CD18F009DF71E /* Frameworks */,
+				093B3D22281CD18F009DF71E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				093B3D29281CD190009DF71E /* PBXTargetDependency */,
+			);
+			name = CalorieHutTests;
+			productName = CalorieHutTests;
+			productReference = 093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		09AF6D9527FB81B400D344BF /* CalorieHut */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09AF6DA427FB81B600D344BF /* Build configuration list for PBXNativeTarget "CalorieHut" */;
@@ -119,7 +212,7 @@
 			packageProductDependencies = (
 			);
 			productName = CalorieHut;
-			productReference = 09AF6D9627FB81B400D344BF /* CalorieHut.app */;
+			productReference = 09AF6D9627FB81B400D344BF /* Calorie Hut.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,6 +225,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					093B3D23281CD18F009DF71E = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 09AF6D9527FB81B400D344BF;
+					};
 					09AF6D9527FB81B400D344BF = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -153,38 +250,115 @@
 			projectRoot = "";
 			targets = (
 				09AF6D9527FB81B400D344BF /* CalorieHut */,
+				093B3D23281CD18F009DF71E /* CalorieHutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		093B3D22281CD18F009DF71E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09AF6D9427FB81B400D344BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				09AF6DA127FB81B600D344BF /* Preview Assets.xcassets in Resources */,
+				09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */,
 				09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */,
+				09ECA8E9280F75A800F24966 /* ding.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		093B3D20281CD18F009DF71E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093B3D27281CD190009DF71E /* CalorieHutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09AF6D9227FB81B400D344BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */,
+				09D88869280310D50024B039 /* CalculatorView.swift in Sources */,
+				09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */,
+				09E7C8E927FCEE8F00153CD9 /* MealViewModel.swift in Sources */,
+				0986372E2825C50600516CF7 /* CustomTabBarView.swift in Sources */,
 				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
 				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
+				09ECA8E7280F71F700F24966 /* SoundManager.swift in Sources */,
 				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
+				09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */,
 				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,
+				09E7C8EB27FCF58700153CD9 /* MealsListView.swift in Sources */,
 				09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */,
+				09ECA8EB280F771200F24966 /* NotificationManager.swift in Sources */,
+				09E7C8E327FC968C00153CD9 /* Category.swift in Sources */,
+				09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */,
+				098637302825C56500516CF7 /* TabViewModel.swift in Sources */,
+				093A3BC12800FECA00AFA704 /* FavoriteMealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		093B3D29281CD190009DF71E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09AF6D9527FB81B400D344BF /* CalorieHut */;
+			targetProxy = 093B3D28281CD190009DF71E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		093B3D2A281CD190009DF71E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWLH47G69C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calorie Hut.app/Calorie Hut";
+			};
+			name = Debug;
+		};
+		093B3D2B281CD190009DF71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWLH47G69C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calorie Hut.app/Calorie Hut";
+			};
+			name = Release;
+		};
 		09AF6DA227FB81B600D344BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -235,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -289,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -313,6 +487,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,10 +496,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHut;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Calorie Hut";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,6 +517,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,16 +526,25 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHut;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Calorie Hut";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CalorieHutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093B3D2A281CD190009DF71E /* Debug */,
+				093B3D2B281CD190009DF71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		09AF6D9127FB81B400D344BF /* Build configuration list for PBXProject "CalorieHut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
