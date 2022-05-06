@@ -14,7 +14,7 @@ extension View{
 }
 
 
-struct ProfileView: View {
+struct CalculatorView: View {
     
     @EnvironmentObject var vm : MealViewModel
     
@@ -32,7 +32,7 @@ struct ProfileView: View {
     
     
     let genderSelection: [String] = [
-    "Male","Female"
+        "Male","Female"
     ]
     
     
@@ -49,7 +49,7 @@ struct ProfileView: View {
                 
                 VStack{
                     VStack{
- 
+                        
                         InfoButton
                         
                         HStack(spacing:10){
@@ -67,8 +67,8 @@ struct ProfileView: View {
                             Text("years")
                         }
                         .padding()
-
-
+                        
+                        
                         HStack(spacing:10){
                             Text("Height")
                                 .foregroundColor(.blue)
@@ -83,7 +83,7 @@ struct ProfileView: View {
                             Text("cm.")
                         }
                         .padding()
-
+                        
                         HStack(spacing:10){
                             Text("Weight")
                                 .foregroundColor(.blue)
@@ -95,7 +95,7 @@ struct ProfileView: View {
                                 .cornerRadius(10)
                                 .keyboardType(.numberPad)
                                 .submitLabel(.done)
-                                
+                            
                             Text("kg.")
                         }
                         .padding()
@@ -113,22 +113,22 @@ struct ProfileView: View {
                         Button{
                             
                             if textChecker(){
-                            
-                            if gender == "Male"{
-                                let w = (13.75 * (Double(weight) ?? 0.0))
-                                let h = (5.003 * (Double(height) ?? 0.0))
-                                let a = (6.755 * (Double(age) ?? 0.0))
-                                let res = ((66.47  + w + h) - a)
-                                vm.userDailyCal = String(format: "%.0f", res)
-                                vm.addKcal(kcal: vm.userDailyCal)
-                            }else{
-                                let w = (9.563 * (Double(weight) ?? 0.0))
-                                let h = (1.850 * (Double(height) ?? 0.0))
-                                let a = (4.676 * (Double(age) ?? 0.0))
-                                let res = ((655.1 + w + h) - a)
-                                vm.userDailyCal = String(format: "%.0f", res)
-                                vm.addKcal(kcal: vm.userDailyCal)
-                            }
+                                
+                                if gender == "Male"{
+                                    let w = (13.75 * (Double(weight) ?? 0.0))
+                                    let h = (5.003 * (Double(height) ?? 0.0))
+                                    let a = (6.755 * (Double(age) ?? 0.0))
+                                    let res = ((66.47  + w + h) - a)
+                                    vm.userDailyCal = String(format: "%.0f", res)
+                                    vm.addKcal(kcal: vm.userDailyCal)
+                                }else{
+                                    let w = (9.563 * (Double(weight) ?? 0.0))
+                                    let h = (1.850 * (Double(height) ?? 0.0))
+                                    let a = (4.676 * (Double(age) ?? 0.0))
+                                    let res = ((655.1 + w + h) - a)
+                                    vm.userDailyCal = String(format: "%.0f", res)
+                                    vm.addKcal(kcal: vm.userDailyCal)
+                                }
                             }
                         }label: {
                             Text("Calculate")
@@ -137,11 +137,11 @@ struct ProfileView: View {
                                 .frame(height:55)
                                 .frame(maxWidth:120)
                                 .background(textChecker() ? Color.accentColor
-                                : Color.gray)
+                                            : Color.gray)
                                 .cornerRadius(10)
                                 .padding()
                         }
-                                
+                        
                         
                         if vm.userDailyCal.isEmpty{
                             
@@ -155,26 +155,26 @@ struct ProfileView: View {
                                 Text("daily")
                             }
                         }
-//                        
-//                        HStack {
-//                            Text("Or enter here:")
-//                            TextField("",text: $vm.userDailyCal)
-//                                .frame(width:80,height: 50)
-//                                .border(.gray, width: 1.8)
-//                            .cornerRadius(10)
-//                            Button{
-//                                vm.addKcal(kcal: vm.userDailyCal)
-//                            }label: {
-//                                Text("Calculate")
-//                                    .foregroundColor(userChecker()
-//                                    ? Color.accentColor
-//                                    : Color.gray)
-//                                    .font(.headline)
-//                                    
-//                                    .padding()
-//                            }
-//                         
-//                        }
+                        //
+                        //                        HStack {
+                        //                            Text("Or enter here:")
+                        //                            TextField("",text: $vm.userDailyCal)
+                        //                                .frame(width:80,height: 50)
+                        //                                .border(.gray, width: 1.8)
+                        //                            .cornerRadius(10)
+                        //                            Button{
+                        //                                vm.addKcal(kcal: vm.userDailyCal)
+                        //                            }label: {
+                        //                                Text("Calculate")
+                        //                                    .foregroundColor(userChecker()
+                        //                                    ? Color.accentColor
+                        //                                    : Color.gray)
+                        //                                    .font(.headline)
+                        //
+                        //                                    .padding()
+                        //                            }
+                        //
+                        //                        }
                         
                     }
                     .padding()
@@ -204,14 +204,14 @@ struct ProfileView: View {
         }
         return true
     }
-//    func userChecker()->Bool{
-//        if(vm.userDailyCal.count<4){
-//            alertTitle = "Invalid input"
-//            showAlert.toggle()
-//            return false
-//        }
-//        return true
-//    }
+    //    func userChecker()->Bool{
+    //        if(vm.userDailyCal.count<4){
+    //            alertTitle = "Invalid input"
+    //            showAlert.toggle()
+    //            return false
+    //        }
+    //        return true
+    //    }
     
     func getAlert()->Alert{
         return Alert(title: Text(alertTitle))
@@ -221,12 +221,12 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        CalculatorView()
             .environmentObject(MealViewModel())
     }
 }
 
-extension ProfileView{
+extension CalculatorView{
     
     private var InfoButton:some View{
         HStack {
