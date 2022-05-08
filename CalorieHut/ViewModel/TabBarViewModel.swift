@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class TabBarViewModel: ObservableObject{
+    @Published var cuurentTab = "Home"
+}
+
+

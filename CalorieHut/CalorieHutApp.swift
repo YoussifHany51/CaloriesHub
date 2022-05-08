@@ -13,7 +13,7 @@ struct CalorieHutApp: App {
     @StateObject var vm : MealViewModel=MealViewModel()
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TabBarView()
                 .environmentObject(vm)
         }
     }
