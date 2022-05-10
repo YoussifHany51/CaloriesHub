@@ -11,8 +11,8 @@
 		093B3D27281CD190009DF71E /* CalorieHutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B3D26281CD190009DF71E /* CalorieHutTests.swift */; };
 		09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09446D36281584FE00B295E7 /* LaunchScreen.storyboard */; };
 		09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09446D3C2815F31200B295E7 /* MealRecordView.swift */; };
-		0986372E2825C50600516CF7 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* CustomTabBarView.swift */; };
-		098637302825C56500516CF7 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabViewModel.swift */; };
+		0986372E2825C50600516CF7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* TabBarView.swift */; };
+		098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabBarViewModel.swift */; };
 		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
 		09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */; };
 		09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6D9D27FB81B600D344BF /* Assets.xcassets */; };
@@ -48,8 +48,8 @@
 		093B3D26281CD190009DF71E /* CalorieHutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutTests.swift; sourceTree = "<group>"; };
 		09446D36281584FE00B295E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
-		0986372D2825C50600516CF7 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
-		0986372F2825C56500516CF7 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		0986372D2825C50600516CF7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		0986372F2825C56500516CF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
 		09AF6D9627FB81B400D344BF /* Calorie Hut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Hut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutApp.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				09D88868280310D50024B039 /* CalculatorView.swift */,
 				09A10EAF281053D500BAD70E /* InfoSheetView.swift */,
 				09446D3C2815F31200B295E7 /* MealRecordView.swift */,
-				0986372D2825C50600516CF7 /* CustomTabBarView.swift */,
+				0986372D2825C50600516CF7 /* TabBarView.swift */,
 				09446D36281584FE00B295E7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */,
-				0986372F2825C56500516CF7 /* TabViewModel.swift */,
+				0986372F2825C56500516CF7 /* TabBarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 				09D88869280310D50024B039 /* CalculatorView.swift in Sources */,
 				09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */,
 				09E7C8E927FCEE8F00153CD9 /* MealViewModel.swift in Sources */,
-				0986372E2825C50600516CF7 /* CustomTabBarView.swift in Sources */,
+				0986372E2825C50600516CF7 /* TabBarView.swift in Sources */,
 				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
 				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
 				09ECA8E7280F71F700F24966 /* SoundManager.swift in Sources */,
@@ -305,7 +305,7 @@
 				09ECA8EB280F771200F24966 /* NotificationManager.swift in Sources */,
 				09E7C8E327FC968C00153CD9 /* Category.swift in Sources */,
 				09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */,
-				098637302825C56500516CF7 /* TabViewModel.swift in Sources */,
+				098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */,
 				093A3BC12800FECA00AFA704 /* FavoriteMealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

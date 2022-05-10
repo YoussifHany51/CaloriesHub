@@ -24,6 +24,13 @@ struct InfoSheetView: View {
                 Text("Note:  If you're pregnant or breast-feeding, are a competitive athlete, or have a metabolic disease, such as diabetes, the calorie calculator may overestimate or underestimate your actual calorie needs.")
                     .font(.headline)
                     .padding()
+                VStack(alignment:.leading,spacing: 10){
+                    Text(" ⦿ Sedentary (little or no exercise)")
+                    Text(" ⦿ Lightly active (exercise 1–3 days/week)")
+                    Text(" ⦿ Moderately active (exercise 3–5 days/week)")
+                    Text(" ⦿ Active (exercise 6–7 days/week)")
+                    Text(" ⦿ Very active (hard exercise 6–7 days/week)")
+                }
                 Spacer()
             }
             .padding()
