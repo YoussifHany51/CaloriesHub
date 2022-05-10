@@ -158,6 +158,8 @@ class MealViewModel: ObservableObject{
         Meal(name: "Squid", kcal: 92, quantity: 100, unit: "g", isFav: false),
         Meal(name: "Sturgeon", kcal: 135, quantity: 100, unit: "g", isFav: false),
         Meal(name: "Sushi", kcal: 150, quantity: 100, unit: "g", isFav: false),
+        Meal(name: "Shrimp", kcal: 99, quantity: 100, unit: "g", isFav: false),
+        Meal(name: "Freid Shrimp", kcal: 277, quantity: 100, unit: "g", isFav: false),
         Meal(name: "Triggerfish", kcal: 93, quantity: 100, unit: "g", isFav: false),
         Meal(name: "Trout", kcal: 190, quantity: 100, unit: "g", isFav: false),
         Meal(name: "Tuna", kcal: 132, quantity: 100, unit: "g", isFav: false),
@@ -762,8 +764,8 @@ class MealViewModel: ObservableObject{
         let calender = Calendar.current
         let day1 = calender.component(.day, from: date)
 
-        print(day1)
-        print("hereeeee")
+//        print(day1)
+//        print("hereeeee")
 //        addDay(d: day1)
         if(day1 == day){
             addDay(d: day1)
@@ -772,7 +774,7 @@ class MealViewModel: ObservableObject{
             kcalCount.removeAll()
             addDay(d: day1)
         }
-        print(day)
-        print("hereeee")
+//        print(day)
+//        print("hereeee")
     }
 }
