@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @StateObject var tabData = TabViewModel()
+    @StateObject var tabData = TabBarViewModel()
     
     init(){
         UITabBar.appearance().isHidden = true
@@ -65,7 +65,7 @@ struct TabBarButton: View{
     var image:String
     var animation:Namespace.ID
     
-    @EnvironmentObject var tabData: TabViewModel
+    @EnvironmentObject var tabData: TabBarViewModel
     
     var body: some View{
         Button{
