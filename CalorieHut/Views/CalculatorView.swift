@@ -23,7 +23,7 @@ struct CalculatorView: View {
     @State var weight:String = ""
     
     @State var gender:String = "Male"
-    
+    @State var activity:String = "Sedentary"
     
     @State var alertTitle:String=""
     @State var showAlert:Bool=false
@@ -33,6 +33,10 @@ struct CalculatorView: View {
     
     let genderSelection: [String] = [
         "Male","Female"
+    ]
+    
+    let activitySelection: [String] = [
+        "Sedentary","Lightly active","Moderately active","Active","Very active"
     ]
     
     
@@ -51,85 +55,11 @@ struct CalculatorView: View {
                     VStack{
                         
                         InfoButton
-                        
-                        HStack(spacing:10){
-                            Text("Age")
-                                .foregroundColor(.blue)
-                                .font(.title3)
-                                .bold()
-                                .padding()
-                            TextField("", text: $age)
-                                .frame(width:100,height: 50)
-                                .border(.gray, width: 1.8)
-                                .cornerRadius(10)
-                                .keyboardType(.numberPad)
-                                .submitLabel(.next)
-                            Text("years")
-                        }
-                        .padding()
-                        
-                        
-                        HStack(spacing:10){
-                            Text("Height")
-                                .foregroundColor(.blue)
-                                .font(.title3)
-                                .bold()
-                            TextField("", text: $height)
-                                .frame(width:100,height: 50)
-                                .border(.gray, width: 1.8)
-                                .cornerRadius(10)
-                                .keyboardType(.numberPad)
-                                .submitLabel(.next)
-                            Text("cm.")
-                        }
-                        .padding()
-                        
-                        HStack(spacing:10){
-                            Text("Weight")
-                                .foregroundColor(.blue)
-                                .font(.title3)
-                                .bold()
-                            TextField("", text: $weight)
-                                .frame(width:100,height: 50)
-                                .border(.gray, width: 1.8)
-                                .cornerRadius(10)
-                                .keyboardType(.numberPad)
-                                .submitLabel(.done)
-                            
-                            Text("kg.")
-                        }
-                        .padding()
-                        
-                        Picker(selection:$gender,
-                               label:Text("Gender"),
-                               content:{
-                            ForEach(genderSelection.indices,id:\.self){ index in
-                                Text(genderSelection[index])
-                                    .tag(genderSelection[index])
-                            }
-                        })
-                        .pickerStyle(SegmentedPickerStyle())
+                        TextFieldInputs
                         
                         Button{
-                            
-                            if textChecker(){
-                                
-                                if gender == "Male"{
-                                    let w = (13.75 * (Double(weight) ?? 0.0))
-                                    let h = (5.003 * (Double(height) ?? 0.0))
-                                    let a = (6.755 * (Double(age) ?? 0.0))
-                                    let res = ((66.47  + w + h) - a)
-                                    vm.userDailyCal = String(format: "%.0f", res)
-                                    vm.addKcal(kcal: vm.userDailyCal)
-                                }else{
-                                    let w = (9.563 * (Double(weight) ?? 0.0))
-                                    let h = (1.850 * (Double(height) ?? 0.0))
-                                    let a = (4.676 * (Double(age) ?? 0.0))
-                                    let res = ((655.1 + w + h) - a)
-                                    vm.userDailyCal = String(format: "%.0f", res)
-                                    vm.addKcal(kcal: vm.userDailyCal)
-                                }
-                            }
+                            kcalCalculator(gender: gender,
+                                           activity: activity)
                         }label: {
                             Text("Calculate")
                                 .foregroundColor(.white)
@@ -141,7 +71,6 @@ struct CalculatorView: View {
                                 .cornerRadius(10)
                                 .padding()
                         }
-                        
                         
                         if vm.userDailyCal.isEmpty{
                             
@@ -155,34 +84,10 @@ struct CalculatorView: View {
                                 Text("daily")
                             }
                         }
-                        //
-                        //                        HStack {
-                        //                            Text("Or enter here:")
-                        //                            TextField("",text: $vm.userDailyCal)
-                        //                                .frame(width:80,height: 50)
-                        //                                .border(.gray, width: 1.8)
-                        //                            .cornerRadius(10)
-                        //                            Button{
-                        //                                vm.addKcal(kcal: vm.userDailyCal)
-                        //                            }label: {
-                        //                                Text("Calculate")
-                        //                                    .foregroundColor(userChecker()
-                        //                                    ? Color.accentColor
-                        //                                    : Color.gray)
-                        //                                    .font(.headline)
-                        //
-                        //                                    .padding()
-                        //                            }
-                        //
-                        //                        }
-                        
                     }
                     .padding()
                     Spacer()
-                    
                 }
-                
-                
             }
             .onTapGesture {
                 self.dismissKeyBoard()
@@ -195,6 +100,65 @@ struct CalculatorView: View {
         }
     }
     
+    func kcalCalculator(gender:String,activity:String){
+        if textChecker(){
+            var res = 0.0
+            if gender == "Male"{
+                let w = (13.75 * (Double(weight) ?? 0.0))
+                let h = (5.003 * (Double(height) ?? 0.0))
+                let a = (6.755 * (Double(age) ?? 0.0))
+                let total = ((66.47  + w + h) - a)
+                
+                switch(activity){
+                case "Sedentary":
+                    res = total * 1.2
+                    break
+                case "Lightly active":
+                    res = total * 1.375
+                    break
+                case "Moderately active":
+                    res = total * 1.55
+                    break
+                case "Active":
+                    res = total * 1.725
+                    break
+                default:
+                    // "Very active"
+                    res = total * 1.9
+                }
+                vm.userDailyCal =
+                String(format: "%.0f", res)
+                vm.addKcal(kcal: vm.userDailyCal)
+            }else{
+                let w = (9.563 * (Double(weight) ?? 0.0))
+                let h = (1.850 * (Double(height) ?? 0.0))
+                let a = (4.676 * (Double(age) ?? 0.0))
+                let total = ((655.1 + w + h) - a)
+                
+                switch(activity){
+                case "Sedentary":
+                    res = total * 1.2
+                    break
+                case "Lightly active":
+                    res = total * 1.375
+                    break
+                case "Moderately active":
+                    res = total * 1.55
+                    break
+                case "Active":
+                    res = total * 1.725
+                    break
+                default:
+                    // "Very active"
+                    res = total * 1.9
+                }
+                
+                vm.userDailyCal = String(format: "%.0f", res)
+                vm.addKcal(kcal: vm.userDailyCal)
+            }
+
+        }
+    }
     
     func textChecker()->Bool{
         if(age.count<2 || weight.count<2 || height.count<3){
@@ -204,14 +168,6 @@ struct CalculatorView: View {
         }
         return true
     }
-    //    func userChecker()->Bool{
-    //        if(vm.userDailyCal.count<4){
-    //            alertTitle = "Invalid input"
-    //            showAlert.toggle()
-    //            return false
-    //        }
-    //        return true
-    //    }
     
     func getAlert()->Alert{
         return Alert(title: Text(alertTitle))
@@ -239,6 +195,60 @@ extension CalculatorView{
                     .scaledToFit()
                     .frame(width:30)
             }
+        }
+    }
+    private var TextFieldInputs:some View{
+        VStack{
+            
+            TextField("Age",text: $age)
+                .padding(.horizontal)
+                .frame(height:55)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+                .font(.title)
+            
+            TextField("Height",text: $height)
+                .padding(.horizontal)
+                .frame(height:55)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+                .font(.title)
+            
+            TextField("Weight",text: $weight)
+                .padding(.horizontal)
+                .frame(height:55)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+                .font(.title)
+            
+            
+            Picker(selection:$gender,
+                   label:Text("Gender"),
+                   content:{
+                ForEach(genderSelection.indices,id:\.self){ index in
+                    Text(genderSelection[index])
+                        .tag(genderSelection[index])
+                }
+            })
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            HStack {
+                Text("Choose your activity :")
+                    .font(.headline)
+                Picker(
+                    selection:$activity,
+                    label:Text("Activity"),
+                    content:{
+                        ForEach(activitySelection.indices,id:\.self){ index in
+                            Text(activitySelection[index])
+                                .tag(activitySelection[index])
+                            
+                        }
+                    })
+                .pickerStyle(MenuPickerStyle())
+            }
+            .frame(maxWidth:.infinity)
         }
     }
 }
