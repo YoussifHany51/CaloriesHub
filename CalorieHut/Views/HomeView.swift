@@ -30,6 +30,7 @@ struct HomeView: View {
                     }
                     
                     MealListButton
+                    Spacer()
                 }
                Spacer()
             }
