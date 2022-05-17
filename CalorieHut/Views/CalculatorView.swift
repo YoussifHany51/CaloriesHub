@@ -60,31 +60,27 @@ struct CalculatorView: View {
                         Button{
                             kcalCalculator(gender: gender,
                                            activity: activity)
+                            
+                            setupTextField()
+                            
+                            showAlert.toggle()
                         }label: {
                             Text("Calculate")
                                 .foregroundColor(.white)
                                 .font(.headline)
                                 .frame(height:55)
                                 .frame(maxWidth:120)
-                                .background(textChecker() ? Color.accentColor
-                                            : Color.gray)
+                                .background(textFieldisValid() ?
+                                            Color.accentColor : Color.gray)
                                 .cornerRadius(10)
                                 .padding()
                         }
-                        .disabled(!textChecker())
-                        
-                        if vm.userDailyCal.isEmpty{
+                        .disabled(!textFieldisValid())
+                        .alert("Recommended daily calories:", isPresented: $showAlert, actions: {
                             
-                        }else{
-                            VStack {
-                                HStack {
-                                    Text("Recommended calories : ")
-                                    Text(vm.userDailyCal)
-                                    Text("kcal")
-                                }
-                                Text("daily")
-                            }
-                        }
+                        }, message: {
+                            Text("\(vm.userDailyCal) kcal")
+                        })
                     }
                     .padding()
                     Spacer()
@@ -101,7 +97,7 @@ struct CalculatorView: View {
     }
     
     func kcalCalculator(gender:String,activity:String){
-        if textChecker(){
+        if textFieldisValid(){
             var res = 0.0
             if gender == "Male"{
                 let w = (13.75 * (Double(weight) ?? 0.0))
@@ -156,15 +152,21 @@ struct CalculatorView: View {
                 vm.userDailyCal = String(format: "%.0f", res)
                 vm.addKcal(kcal: vm.userDailyCal)
             }
-
+            
         }
     }
     
-    func textChecker()->Bool{
+    func textFieldisValid()->Bool{
         if(age.count<2 || weight.count<2 || height.count<3){
             return false
         }
         return true
+    }
+    
+    func setupTextField(){
+        height = ""
+        age = ""
+        weight = ""
     }
     
     
