@@ -71,6 +71,7 @@ struct CalculatorView: View {
                                 .cornerRadius(10)
                                 .padding()
                         }
+                        .disabled(!textChecker())
                         
                         if vm.userDailyCal.isEmpty{
                             
@@ -93,7 +94,6 @@ struct CalculatorView: View {
                 self.dismissKeyBoard()
             }
             .navigationTitle("Calorie Calculator")
-            .alert(isPresented: $showAlert, content: getAlert)
             .sheet(isPresented: $showInfoSheet, content: {
                 InfoSheetView()
             })
@@ -162,16 +162,11 @@ struct CalculatorView: View {
     
     func textChecker()->Bool{
         if(age.count<2 || weight.count<2 || height.count<3){
-            alertTitle = "Invalid input"
-            showAlert.toggle()
             return false
         }
         return true
     }
     
-    func getAlert()->Alert{
-        return Alert(title: Text(alertTitle))
-    }
     
 }
 
