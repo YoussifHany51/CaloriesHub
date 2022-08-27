@@ -21,6 +21,7 @@ struct CalculatorView: View {
     @State var age = ""
     @State var height:String = ""
     @State var weight:String = ""
+    @State var userTargetKcal:String = ""
     
     @State var gender:String = "Male"
     @State var activity:String = "Sedentary"
@@ -55,13 +56,12 @@ struct CalculatorView: View {
                     VStack{
                         
                         InfoButton
-                        TextFieldInputs
-                        
+                        TextFieldInputs_CalcButton
                         Button{
                             kcalCalculator(gender: gender,
                                            activity: activity)
                             
-                            setupTextField()
+                            resetTextField()
                             
                             showAlert.toggle()
                         }label: {
@@ -81,6 +81,7 @@ struct CalculatorView: View {
                         }, message: {
                             Text("\(vm.userDailyCal) kcal")
                         })
+                       TargetUserKcalSection
                     }
                     .padding()
                     Spacer()
@@ -163,10 +164,11 @@ struct CalculatorView: View {
         return true
     }
     
-    func setupTextField(){
+    func resetTextField(){
         height = ""
         age = ""
         weight = ""
+        userTargetKcal = ""
     }
     
     
@@ -194,7 +196,7 @@ extension CalculatorView{
             }
         }
     }
-    private var TextFieldInputs:some View{
+    private var TextFieldInputs_CalcButton:some View{
         VStack{
             
             TextField("Age",text: $age)
@@ -249,6 +251,29 @@ extension CalculatorView{
                 .pickerStyle(MenuPickerStyle())
             }
             .frame(maxWidth:.infinity)
+        }
+    }
+    private var TargetUserKcalSection:some View{
+        VStack{
+            TextField("Insert target kcal directly",text: $userTargetKcal)
+                .padding(.horizontal)
+                .frame(height:40)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+                .font(.headline)
+                .keyboardType(.decimalPad)
+            if !userTargetKcal.isEmpty{
+                Button{
+                    vm.userDailyCal = userTargetKcal
+                    vm.addKcal(kcal: vm.userDailyCal)
+                    resetTextField()
+                }label: {
+                    Image(systemName:"checkmark")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:25,height: 20)
+                }
+            }
         }
     }
 }
