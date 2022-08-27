@@ -203,6 +203,7 @@ extension CalculatorView{
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
+                .keyboardType(.decimalPad)
             
             TextField("Height",text: $height)
                 .padding(.horizontal)
@@ -210,6 +211,7 @@ extension CalculatorView{
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
+                .keyboardType(.decimalPad)
             
             TextField("Weight",text: $weight)
                 .padding(.horizontal)
@@ -217,6 +219,7 @@ extension CalculatorView{
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
+                .keyboardType(.decimalPad)
             
             
             Picker(selection:$gender,
