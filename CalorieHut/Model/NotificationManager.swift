@@ -24,91 +24,86 @@ class NotificationManager{
         }
     }
     
-    func pushNotification1(){
+    func pushNotification(){
         
-        let content = UNMutableNotificationContent()
-        content.title = "Good Morning 😘"
-        content.subtitle = "Let's have our breakfast"
-        content.sound = .default
-        content.badge = 1
+        //MARK: Notification 1
+        let content1 = UNMutableNotificationContent()
+        content1.title = "Good Morning 😘"
+        content1.subtitle = "Let's have our breakfast"
+        content1.sound = .default
+        content1.badge = 1
         
-        var dateC=DateComponents()
+        var dateC1=DateComponents()
         
-        dateC.hour = 10
-        dateC.minute = 0
+        dateC1.hour = 10
+        dateC1.minute = 0
         
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateC, repeats: true)
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateC1, repeats: true)
         
-        let requst = UNNotificationRequest(
-            identifier: UUID().uuidString, content: content,trigger: trigger
+        let requst1 = UNNotificationRequest(
+            identifier: UUID().uuidString, content: content1,trigger: trigger1
         )
-        UNUserNotificationCenter.current().add(requst)
-    }
-    
-    func pushNotification2(){
+        UNUserNotificationCenter.current().add(requst1)
         
-        let content = UNMutableNotificationContent()
-        content.title = "Time for launch !!"
-        content.subtitle = "What are you going to eat? 😋"
-        content.sound = .default
-        content.badge = 1
+        //MARK: Notification 2
+        let content2 = UNMutableNotificationContent()
+        content2.title = "Time for launch !!"
+        content2.subtitle = "What are you going to eat? 😋"
+        content2.sound = .default
+        content2.badge = 1
         
-        var dateC=DateComponents()
+        var dateC2=DateComponents()
         
-        dateC.hour = 15
-        dateC.minute = 0
+        dateC2.hour = 15
+        dateC2.minute = 0
         
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateC, repeats: true)
+        let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateC2, repeats: true)
         
-        let requst = UNNotificationRequest(
-            identifier: UUID().uuidString, content: content,trigger: trigger
+        let requst2 = UNNotificationRequest(
+            identifier: UUID().uuidString, content: content2,trigger: trigger2
         )
-        UNUserNotificationCenter.current().add(requst)
-    }
-    
-    func pushNotification3(){
+        UNUserNotificationCenter.current().add(requst2)
         
-        let content = UNMutableNotificationContent()
-        content.title = "Good evening ❤️"
-        content.subtitle = "Tip: Do not eat too much at night"
-        content.sound = .default
-        content.badge = 1
+        //MARK: Notification 3
+        let content3 = UNMutableNotificationContent()
+        content3.title = "Good evening ❤️"
+        content3.subtitle = "Tip: Do not eat too much at night"
+        content3.sound = .default
+        content3.badge = 1
         
-        var dateC=DateComponents()
+        var dateC3=DateComponents()
         
-        dateC.hour = 21
-        dateC.minute = 0
+        dateC3.hour = 21
+        dateC3.minute = 0
         
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateC, repeats: true)
+        let trigger3 = UNCalendarNotificationTrigger(dateMatching: dateC3, repeats: true)
         
-        let requst = UNNotificationRequest(
-            identifier: UUID().uuidString, content: content,trigger: trigger
+        let requst3 = UNNotificationRequest(
+            identifier: UUID().uuidString, content: content3,trigger: trigger3
         )
-        UNUserNotificationCenter.current().add(requst)
-    }
-    
-    func pushNotification4(){
+        UNUserNotificationCenter.current().add(requst3)
         
-        let content = UNMutableNotificationContent()
-        content.title = "Good night ❤️"
-        content.subtitle = "Sweet Dreams 🌜"
-        content.sound = .default
-        content.badge = 1
+        //MARK: Notification 4
+        let content4 = UNMutableNotificationContent()
+        content4.title = "Good night ❤️"
+        content4.subtitle = "Sweet Dreams 🌜"
+        content4.sound = .default
+        content4.badge = 1
         
-        var dateC=DateComponents()
+        var dateC4=DateComponents()
         
-        dateC.hour = 23
-        dateC.minute = 30
+        dateC4.hour = 23
+        dateC4.minute = 30
         
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateC, repeats: true)
+        let trigger4 = UNCalendarNotificationTrigger(dateMatching: dateC4, repeats: true)
         
-        let requst = UNNotificationRequest(
-            identifier: UUID().uuidString, content: content,trigger: trigger
+        let requst4 = UNNotificationRequest(
+            identifier: UUID().uuidString, content: content4,trigger: trigger4
         )
-        UNUserNotificationCenter.current().add(requst)
+        UNUserNotificationCenter.current().add(requst4)
     }
 }

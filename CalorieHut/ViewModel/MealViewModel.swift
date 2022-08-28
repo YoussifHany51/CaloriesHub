@@ -599,12 +599,8 @@ class MealViewModel: ObservableObject{
     getFavMeals()
     getUserKcal()
     getDay()
-    deleteAtDayEnd()
-        
-        NotificationManager.instance.pushNotification1()
-        NotificationManager.instance.pushNotification2()
-        NotificationManager.instance.pushNotification3()
-        NotificationManager.instance.pushNotification4()
+    deleteAtDayEnd()    
+    NotificationManager.instance.pushNotification()
     }
     //MARK: ADD & Delete MEAL
     
