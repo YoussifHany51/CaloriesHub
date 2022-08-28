@@ -25,7 +25,7 @@ class HapticSoundManager{
         }
         
     }
-    func viberationHaptic(type: UINotificationFeedbackGenerator.FeedbackType) {
+    func vibrationHaptic(type: UINotificationFeedbackGenerator.FeedbackType) {
           let generator = UINotificationFeedbackGenerator()
           generator.notificationOccurred(type)
       }
