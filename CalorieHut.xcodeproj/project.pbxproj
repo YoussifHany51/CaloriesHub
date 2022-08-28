@@ -27,7 +27,7 @@
 		09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E627FCE96B00153CD9 /* Meal.swift */; };
 		09E7C8E927FCEE8F00153CD9 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */; };
 		09E7C8EB27FCF58700153CD9 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8EA27FCF58700153CD9 /* MealsListView.swift */; };
-		09ECA8E7280F71F700F24966 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECA8E6280F71F700F24966 /* SoundManager.swift */; };
+		09ECA8E7280F71F700F24966 /* HapticSoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECA8E6280F71F700F24966 /* HapticSoundManager.swift */; };
 		09ECA8E9280F75A800F24966 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09ECA8E8280F75A800F24966 /* ding.mp3 */; };
 		09ECA8EB280F771200F24966 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECA8EA280F771200F24966 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +65,7 @@
 		09E7C8E627FCE96B00153CD9 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		09E7C8E827FCEE8F00153CD9 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		09E7C8EA27FCF58700153CD9 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
-		09ECA8E6280F71F700F24966 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		09ECA8E6280F71F700F24966 /* HapticSoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticSoundManager.swift; sourceTree = "<group>"; };
 		09ECA8E8280F75A800F24966 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		09ECA8EA280F771200F24966 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 				09E7C8E227FC968C00153CD9 /* Category.swift */,
 				09E7C8E627FCE96B00153CD9 /* Meal.swift */,
 				09ECA8EA280F771200F24966 /* NotificationManager.swift */,
-				09ECA8E6280F71F700F24966 /* SoundManager.swift */,
+				09ECA8E6280F71F700F24966 /* HapticSoundManager.swift */,
 				09ECA8E8280F75A800F24966 /* ding.mp3 */,
 			);
 			path = Model;
@@ -296,7 +296,7 @@
 				0986372E2825C50600516CF7 /* TabBarView.swift in Sources */,
 				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
 				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
-				09ECA8E7280F71F700F24966 /* SoundManager.swift in Sources */,
+				09ECA8E7280F71F700F24966 /* HapticSoundManager.swift in Sources */,
 				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
 				09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */,
 				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,

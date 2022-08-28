@@ -8,9 +8,9 @@
 import Foundation
 import AVKit
 
-class SoundManager{
+class HapticSoundManager{
     
-    static let instance = SoundManager()
+    static let instance = HapticSoundManager()
     
     var player : AVAudioPlayer?
     
@@ -25,4 +25,8 @@ class SoundManager{
         }
         
     }
+    func viberationHaptic(type: UINotificationFeedbackGenerator.FeedbackType) {
+          let generator = UINotificationFeedbackGenerator()
+          generator.notificationOccurred(type)
+      }
 }
