@@ -60,12 +60,7 @@ extension HomeView{
         Button{
             vm.showMealsEatenList.toggle()
         }label: {
-            Text("Meal's record")
-                .font(.title3)
-                .fontWeight(.semibold)
-                .frame(width:150,height: 40)
-                .background(Color.white)
-                .cornerRadius(10)
+            MealsRecordButton()
         }
     }
     

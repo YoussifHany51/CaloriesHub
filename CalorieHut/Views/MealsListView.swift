@@ -18,23 +18,7 @@ struct MealsListView: View {
     
     var body: some View {
         VStack {
-            ZStack (alignment: .bottom){
-                
-                Image(image)
-                    .resizable()
-                    .scaledToFit()
-                    .ignoresSafeArea()
-                    .cornerRadius(20)
-                
-                HStack{
-                    Text(name)
-                        .font(.title)
-                        .fontWeight(.black)
-                        .foregroundColor(.white)
-                        .padding()
-                    Spacer()
-                }
-            }
+            CategoryTitle
             List{
                 ForEach(vm.checkMealList(text: name, vm: vm)){ meal in
                     HStack {
@@ -94,7 +78,8 @@ struct MealsListView: View {
                                 
                                 vm.setCountKcal(count: meal.kcal)
                                 
-                                SoundManager.instance.playSound()
+//                                HapticSoundManager.instance.playSound()
+                                HapticSoundManager.instance.vibrationHaptic(type: .success)
                                 print("Added")
                             }label: {
                                 Image(systemName: "plus")
@@ -108,7 +93,7 @@ struct MealsListView: View {
             }
             
         }
-        .overlay(backButton, alignment: .topLeading)
+        .overlay(BackButton, alignment: .topLeading)
     }
 }
 
@@ -120,7 +105,7 @@ struct MealsListView_Previews: PreviewProvider {
 }
 
 extension MealsListView{
-    private var backButton: some View{
+    private var BackButton: some View{
         Button{
             presentationMode.wrappedValue.dismiss()
         } label:{
@@ -132,6 +117,25 @@ extension MealsListView{
                 .cornerRadius(10)
                 .shadow(radius: 4)
                 .padding()
+        }
+    }
+    
+    private var CategoryTitle:some View{
+        ZStack (alignment: .bottom){
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .ignoresSafeArea()
+                .cornerRadius(20)
+            
+            HStack{
+                Text(name)
+                    .font(.title)
+                    .fontWeight(.black)
+                    .foregroundColor(.white)
+                    .padding()
+                Spacer()
+            }
         }
     }
     

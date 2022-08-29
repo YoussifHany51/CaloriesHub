@@ -46,7 +46,8 @@ struct FavoriteMealView: View {
                                                    unit: fav.unit)
                                         vm.setCountKcal(count: fav.kcal)
                                         print("Added")
-                                        SoundManager.instance.playSound()
+                                        HapticSoundManager.instance.playSound()
+                                        //                                  HapticSoundManager.instance.vibrationHaptic(type: .success)
                                     }label: {
                                         Image(systemName: "plus")
                                             .padding()

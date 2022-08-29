@@ -11,6 +11,7 @@
 		093B3D27281CD190009DF71E /* CalorieHutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B3D26281CD190009DF71E /* CalorieHutTests.swift */; };
 		09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09446D36281584FE00B295E7 /* LaunchScreen.storyboard */; };
 		09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09446D3C2815F31200B295E7 /* MealRecordView.swift */; };
+		0965BDFB28BBC696007DB21A /* MealsRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */; };
 		0986372E2825C50600516CF7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* TabBarView.swift */; };
 		098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabBarViewModel.swift */; };
 		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
@@ -48,6 +49,7 @@
 		093B3D26281CD190009DF71E /* CalorieHutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutTests.swift; sourceTree = "<group>"; };
 		09446D36281584FE00B295E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
+		0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRecordButton.swift; sourceTree = "<group>"; };
 		0986372D2825C50600516CF7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		0986372F2825C56500516CF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,16 @@
 			path = CalorieHutTests;
 			sourceTree = "<group>";
 		};
+		0965BDF928BBC66D007DB21A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
+				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
+				0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		09AF6D8D27FB81B400D344BF = {
 			isa = PBXGroup;
 			children = (
@@ -138,16 +150,15 @@
 		09AF6DA727FB81DA00D344BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0965BDF928BBC66D007DB21A /* Components */,
 				09AF6DAA27FB81FA00D344BF /* HomeView.swift */,
-				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
-				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
+				09446D3C2815F31200B295E7 /* MealRecordView.swift */,
 				09AF6DB627FBA69000D344BF /* MainView.swift */,
 				09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */,
 				09E7C8EA27FCF58700153CD9 /* MealsListView.swift */,
 				093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */,
 				09D88868280310D50024B039 /* CalculatorView.swift */,
 				09A10EAF281053D500BAD70E /* InfoSheetView.swift */,
-				09446D3C2815F31200B295E7 /* MealRecordView.swift */,
 				0986372D2825C50600516CF7 /* TabBarView.swift */,
 				09446D36281584FE00B295E7 /* LaunchScreen.storyboard */,
 			);
@@ -302,6 +313,7 @@
 				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,
 				09E7C8EB27FCF58700153CD9 /* MealsListView.swift in Sources */,
 				09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */,
+				0965BDFB28BBC696007DB21A /* MealsRecordButton.swift in Sources */,
 				09ECA8EB280F771200F24966 /* NotificationManager.swift in Sources */,
 				09E7C8E327FC968C00153CD9 /* Category.swift in Sources */,
 				09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */,

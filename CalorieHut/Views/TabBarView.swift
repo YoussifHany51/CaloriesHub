@@ -39,7 +39,7 @@ struct TabBarView: View {
             }
                 .environmentObject(tabData)
                 .padding(.vertical,10)
-                .padding()
+//                .padding()
                 .background(.thinMaterial,in: Capsule())
                 .padding(.horizontal,20)
                 .padding(.bottom,8)

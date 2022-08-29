@@ -24,19 +24,16 @@ struct MealRecordView: View {
                     List{
                         ForEach(vm.meals){ meal in
                             HStack {
-                                VStack(alignment:.leading,spacing: 10){
+                                VStack(alignment:.leading){
                                     Text(meal.name)
-                                        .font(.title)
                                     
                                     HStack {
                                         Text("\(meal.kcal.description)")
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(.red)
                                             
                                         Text("Kcal")
-                                            .foregroundColor(.red)
+                                            .foregroundColor(.gray)
                                     }
-                                    .font(.subheadline)
-                                    .padding(.leading)
                                 }
                                 .padding()
                             .listRowBackground(Color.clear)
@@ -45,8 +42,7 @@ struct MealRecordView: View {
                         .onDelete(perform: vm.deleteMeal)
                         .onMove(perform: vm.moveMeal)
                     }
-                    .navigationTitle("Today's record")
-                    .navigationBarItems(leading: EditButton())
+                    .navigationTitle("Meals's record")
                     }
                 }
             }
@@ -71,7 +67,7 @@ extension MealRecordView {
         } label:{
             Image(systemName: "xmark")
                 .font(.headline)
-                .padding(16)
+                .padding(10)
                 .foregroundColor(.primary)
                 .background(.ultraThickMaterial)
                 .cornerRadius(10)
