@@ -19,6 +19,7 @@ struct MealsListView: View {
     var body: some View {
         VStack {
             CategoryTitle
+            // Search bar section
             List{
                 ForEach(vm.checkMealList(text: name, vm: vm)){ meal in
                     HStack {

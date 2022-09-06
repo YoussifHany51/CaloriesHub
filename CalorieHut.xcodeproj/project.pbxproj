@@ -12,6 +12,7 @@
 		09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09446D36281584FE00B295E7 /* LaunchScreen.storyboard */; };
 		09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09446D3C2815F31200B295E7 /* MealRecordView.swift */; };
 		0965BDFB28BBC696007DB21A /* MealsRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */; };
+		0965BDFD28BD0E87007DB21A /* CustomMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFC28BD0E87007DB21A /* CustomMealView.swift */; };
 		0986372E2825C50600516CF7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* TabBarView.swift */; };
 		098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabBarViewModel.swift */; };
 		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
@@ -50,6 +51,7 @@
 		09446D36281584FE00B295E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
 		0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRecordButton.swift; sourceTree = "<group>"; };
+		0965BDFC28BD0E87007DB21A /* CustomMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMealView.swift; sourceTree = "<group>"; };
 		0986372D2825C50600516CF7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		0986372F2825C56500516CF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				09D88868280310D50024B039 /* CalculatorView.swift */,
 				09A10EAF281053D500BAD70E /* InfoSheetView.swift */,
 				0986372D2825C50600516CF7 /* TabBarView.swift */,
+				0965BDFC28BD0E87007DB21A /* CustomMealView.swift */,
 				09446D36281584FE00B295E7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0965BDFD28BD0E87007DB21A /* CustomMealView.swift in Sources */,
 				09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */,
 				09D88869280310D50024B039 /* CalculatorView.swift in Sources */,
 				09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */,

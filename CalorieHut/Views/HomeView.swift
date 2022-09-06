@@ -37,7 +37,25 @@ struct HomeView: View {
             .sheet(isPresented: $vm.showMealsEatenList, content: {
                 MealRecordView()
             })
-            .navigationTitle("Hello👋")
+            .navigationTitle("")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: {
+                        CustomMealView()
+                    }, label: {
+                        Text("Create Meal")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.accentColor)
+                            .underline()
+                    })
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Hello 👋")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                }
+            }
         }
         .frame(width:UIScreen.main.bounds.width)
         .onAppear{

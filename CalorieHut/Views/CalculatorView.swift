@@ -255,7 +255,7 @@ extension CalculatorView{
     }
     private var TargetUserKcalSection:some View{
         VStack{
-            TextField("Insert target kcal directly",text: $userTargetKcal)
+            TextField("Insert kcal directly",text: $userTargetKcal)
                 .padding(.horizontal)
                 .frame(height:40)
                 .background(Color.gray.opacity(0.3))
