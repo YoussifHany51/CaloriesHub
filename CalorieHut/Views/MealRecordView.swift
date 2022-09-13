@@ -33,10 +33,13 @@ struct MealRecordView: View {
                                             
                                         Text("Kcal")
                                             .foregroundColor(.gray)
+                                        
+//                                        Spacer()
+//                                        Text(vm.extractMealDate())
                                     }
                                 }
                                 .padding()
-                            .listRowBackground(Color.clear)
+                                .listRowBackground(Color.clear)
                             }
                         }
                         .onDelete(perform: vm.deleteMeal)

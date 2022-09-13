@@ -511,43 +511,44 @@ class MealViewModel: ObservableObject{
     func checkMealList(text:String,vm:MealViewModel)-> [Meal]{
 
         if text == "Fruit"{
-            return vm.fruitList
+            return  self.filterMeals(text: self.searchText, mealList: vm.fruitList)
         }
         else if text == "Vegetable"{
-            return vm.vegetablesList
+            return self.filterMeals(text: self.searchText, mealList: vm.vegetablesList)
         }
         else if text == "Dessert"{
-            return vm.dessertList
+            return self.filterMeals(text: self.searchText, mealList: vm.dessertList)
         }
         else if text == "Nuts"{
-            return vm.nutsList
+            return self.filterMeals(text: self.searchText, mealList: vm.nutsList)
         }
         else if text == "SeaFood"{
-            return vm.seaFoodList
+            return self.filterMeals(text: self.searchText, mealList: vm.seaFoodList)
         }
         else if text == "Beef & Chicken"{
-            return vm.beefList
+            return self.filterMeals(text: self.searchText, mealList: vm.beefList)
         }
         else if text == "Fast Food"{
-            return vm.fastFoodList
+            return self.filterMeals(text: self.searchText, mealList: vm.fastFoodList)
         }
         else if text == "Dairy"{
-            return vm.dairyList
+            return self.filterMeals(text: self.searchText, mealList: vm.dairyList)
         }
         else if text == "Hot Drinks"{
-            return vm.hotDrinksList
+            
+            return self.filterMeals(text: self.searchText, mealList: vm.hotDrinksList)
         }
         else if text == "Cold Drinks"{
-            return vm.coldDrinksList
+            return self.filterMeals(text: self.searchText, mealList: vm.coldDrinksList)
         }
         else if text == "Dessert"{
-            return vm.dessertList
+            return self.filterMeals(text: self.searchText, mealList: vm.dessertList)
         }
         else if text == "Pastries"{
-            return vm.pastriesList
+            return self.filterMeals(text: self.searchText, mealList: vm.pastriesList)
         }
         else{
-            return vm.pastaList
+            return self.filterMeals(text: self.searchText, mealList: vm.pastaList)
         }
     }
     
@@ -581,6 +582,7 @@ class MealViewModel: ObservableObject{
     @Published var showMealsEatenList: Bool = false
     @Published var showMealSheet:Bool = false
     @Published var userDailyCal:String = ""
+    @Published var searchText:String = ""
     
     let mealKey:String = "mealList"
     
@@ -602,6 +604,27 @@ class MealViewModel: ObservableObject{
     deleteAtDayEnd()    
     NotificationManager.instance.pushNotification()
     }
+    //MARK: FilterMeals
+    private func filterMeals(text:String , mealList:[Meal]) -> [Meal]{
+        guard !text.isEmpty else{
+            return mealList
+        }
+        
+        let lowerCased = text.lowercased()
+        
+        return mealList.filter { (mealList) -> Bool in
+            return mealList.name.lowercased().contains(lowerCased)
+        }
+    }
+    
+//    func extractMealDate()->String{
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let hour = calendar.component(.hour, from: date)
+//        let minutes = calendar.component(.minute, from: date)
+//        return String(hour) + ":" + String(minutes)
+//    }
+    
     //MARK: ADD & Delete MEAL
     
     func addMeal(name:String,kcal:Float,quantity:Int,unit:String){

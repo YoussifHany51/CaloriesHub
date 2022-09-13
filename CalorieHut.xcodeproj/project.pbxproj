@@ -13,6 +13,7 @@
 		09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09446D3C2815F31200B295E7 /* MealRecordView.swift */; };
 		0965BDFB28BBC696007DB21A /* MealsRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */; };
 		0965BDFD28BD0E87007DB21A /* CustomMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFC28BD0E87007DB21A /* CustomMealView.swift */; };
+		0965BDFF28D0DFD3007DB21A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BDFE28D0DFD2007DB21A /* SearchBarView.swift */; };
 		0986372E2825C50600516CF7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* TabBarView.swift */; };
 		098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabBarViewModel.swift */; };
 		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
@@ -52,6 +53,7 @@
 		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
 		0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRecordButton.swift; sourceTree = "<group>"; };
 		0965BDFC28BD0E87007DB21A /* CustomMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMealView.swift; sourceTree = "<group>"; };
+		0965BDFE28D0DFD2007DB21A /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		0986372D2825C50600516CF7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		0986372F2825C56500516CF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		0965BDF928BBC66D007DB21A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0965BDFE28D0DFD2007DB21A /* SearchBarView.swift */,
 				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
 				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
 				0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */,
@@ -313,6 +316,7 @@
 				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
 				09ECA8E7280F71F700F24966 /* HapticSoundManager.swift in Sources */,
 				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
+				0965BDFF28D0DFD3007DB21A /* SearchBarView.swift in Sources */,
 				09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */,
 				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,
 				09E7C8EB27FCF58700153CD9 /* MealsListView.swift in Sources */,

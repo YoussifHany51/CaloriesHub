@@ -20,6 +20,7 @@ struct MealsListView: View {
         VStack {
             CategoryTitle
             // Search bar section
+            SearchBarView(searchText: $vm.searchText)
             List{
                 ForEach(vm.checkMealList(text: name, vm: vm)){ meal in
                     HStack {
