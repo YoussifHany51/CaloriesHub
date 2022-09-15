@@ -27,11 +27,11 @@ struct CustomMealView: View {
                 .ignoresSafeArea()
             VStack {
                 CirclesHeader
-                .frame(maxHeight:getRect().width)
+                    .frame(maxHeight:getRect().width)
                 TextField_NextButton
-                .padding()
-                .padding(.top,-maxCircleHeight / 1.5)
-                .frame(maxHeight:.infinity,alignment: .top)
+                    .padding()
+                    .padding(.top,-maxCircleHeight / 1.5)
+                    .frame(maxHeight:.infinity,alignment: .top)
             }
         }
         .onTapGesture {
@@ -42,9 +42,9 @@ struct CustomMealView: View {
     func saveButton(){
         if textChecker(){
             vm.addMealToFav(name: mealName, kcal: Float(mealCalorie)!, quantity: Int(mealQuantity)!, unit: mealUnit)
-        presentationMode.wrappedValue.dismiss()
+            presentationMode.wrappedValue.dismiss()
             showAlert.toggle()
-       }
+        }
     }
     func textChecker()->Bool{
         if(mealName.isEmpty||mealCalorie.isEmpty
@@ -113,7 +113,7 @@ extension CustomMealView{
                 Divider()
             }
             .padding(.top,10)
-
+            
             VStack(alignment: .leading, spacing: 8) {
                 Text("Meal Unit")
                     .fontWeight(.bold)
@@ -122,8 +122,8 @@ extension CustomMealView{
                     .font(.system(size: 20,weight: .semibold))
                     .foregroundColor(.primary)
                     .padding(.top,5)
-                    .textCase(.lowercase)
-                    
+                    .textInputAutocapitalization(.never)
+                
                 Divider()
             }
             .padding(.top,10)
@@ -143,7 +143,7 @@ extension CustomMealView{
         }
         .alert(mealName + " " + alertTitle, isPresented: $showAlert) {
             Button("OK", role: .cancel) { }
-                }
+        }
     }
     //MARK: HEADER DESIGN
     private var CirclesHeader:some View{
@@ -155,23 +155,23 @@ extension CustomMealView{
                     maxCircleHeight = height
                 }
             }
-                return AnyView(
-                    ZStack{
-                        Circle()
-                            .fill()
-                            .foregroundColor(.primary)
-                            .offset(x: getRect().width/2,y: -height/1.3)
-                        Circle()
-                            .fill()
-                            .foregroundColor(.primary)
-                            .offset(x: -getRect().width/2,y:-height/1.5)
-                        Circle()
-                            .fill()
-                            .foregroundColor(.mint)
-                            .offset(y:-height/1.3)
-                            .rotationEffect(.init(degrees: -5))
-                    }
-                )
+            return AnyView(
+                ZStack{
+                    Circle()
+                        .fill()
+                        .foregroundColor(.primary)
+                        .offset(x: getRect().width/2,y: -height/1.3)
+                    Circle()
+                        .fill()
+                        .foregroundColor(.primary)
+                        .offset(x: -getRect().width/2,y:-height/1.5)
+                    Circle()
+                        .fill()
+                        .foregroundColor(.mint)
+                        .offset(y:-height/1.3)
+                        .rotationEffect(.init(degrees: -5))
+                }
+            )
         }
     }
 }
@@ -180,6 +180,4 @@ extension View{
     func getRect()->CGRect{
         return UIScreen.main.bounds
     }
-    
-   
 }

@@ -43,7 +43,7 @@ struct HomeView: View {
                     NavigationLink(destination: {
                         CustomMealView()
                     }, label: {
-                        Text("Create Meal")
+                        Text("Create Meal ✏️")
                             .font(.body)
                             .fontWeight(.semibold)
                             .foregroundColor(.accentColor)

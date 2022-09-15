@@ -535,7 +535,6 @@ class MealViewModel: ObservableObject{
             return self.filterMeals(text: self.searchText, mealList: vm.dairyList)
         }
         else if text == "Hot Drinks"{
-            
             return self.filterMeals(text: self.searchText, mealList: vm.hotDrinksList)
         }
         else if text == "Cold Drinks"{
@@ -583,6 +582,7 @@ class MealViewModel: ObservableObject{
     @Published var showMealSheet:Bool = false
     @Published var userDailyCal:String = ""
     @Published var searchText:String = ""
+    @Published var date = Date()
     
     let mealKey:String = "mealList"
     

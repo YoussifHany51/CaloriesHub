@@ -34,8 +34,6 @@ struct MealRecordView: View {
                                         Text("Kcal")
                                             .foregroundColor(.gray)
                                         
-//                                        Spacer()
-//                                        Text(vm.extractMealDate())
                                     }
                                 }
                                 .padding()
