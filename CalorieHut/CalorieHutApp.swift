@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct CalorieHutApp: App {
-    
+    init(){
+        NotificationManager.instance.requestAuthorization()
+    }
     @StateObject var vm : MealViewModel=MealViewModel()
     var body: some Scene {
         WindowGroup {

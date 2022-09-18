@@ -43,7 +43,7 @@ struct FavoriteMealView: View {
                                         vm.addMeal(name: fav.name,
                                                    kcal: fav.kcal,
                                                    quantity: fav.quantity,
-                                                   unit: fav.unit)
+                                                   unit: fav.unit, date: Date())
                                         vm.setCountKcal(count: fav.kcal)
                                         print("Added")
 //                                        HapticSoundManager.instance.playSound()

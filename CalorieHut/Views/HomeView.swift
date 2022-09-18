@@ -59,7 +59,6 @@ struct HomeView: View {
         }
         .frame(width:UIScreen.main.bounds.width)
         .onAppear{
-            NotificationManager.instance.requestAuthorization()
             UIApplication.shared.applicationIconBadgeNumber = 0
         }
     }

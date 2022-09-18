@@ -33,7 +33,9 @@ struct MealRecordView: View {
                                             
                                         Text("Kcal")
                                             .foregroundColor(.gray)
-                                        
+                                        Text("/ \(meal.quantity) \(meal.unit)")
+                                        Spacer()
+                                        Text(meal.date,style: .time)
                                     }
                                 }
                                 .padding()

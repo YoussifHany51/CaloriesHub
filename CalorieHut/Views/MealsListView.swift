@@ -54,7 +54,7 @@ struct MealsListView: View {
                                         name: meal.name,
                                         kcal:meal.kcal,
                                         quantity: meal.quantity,
-                                        unit: meal.unit)
+                                        unit: meal.unit, date: Date())
                                 }
                             }label: {
                                 Image(systemName: "heart.fill")
@@ -76,7 +76,7 @@ struct MealsListView: View {
                                 vm.addMeal(name: meal.name,
                                            kcal: meal.kcal,
                                            quantity: meal.quantity,
-                                           unit: meal.unit)
+                                           unit: meal.unit, date: Date())
                                 
                                 vm.setCountKcal(count: meal.kcal)
                                 
