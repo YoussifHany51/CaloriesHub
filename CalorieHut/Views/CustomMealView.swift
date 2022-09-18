@@ -41,7 +41,7 @@ struct CustomMealView: View {
     //MARK: FUNCS
     func saveButton(){
         if textChecker(){
-            vm.addMealToFav(name: mealName, kcal: Float(mealCalorie)!, quantity: Int(mealQuantity)!, unit: mealUnit)
+            vm.addMealToFav(name: mealName, kcal: Float(mealCalorie)!, quantity: Int(mealQuantity)!, unit: mealUnit, date: Date())
             presentationMode.wrappedValue.dismiss()
             showAlert.toggle()
         }
@@ -133,10 +133,11 @@ extension CustomMealView{
             }label: {
                 Image(systemName: "arrow.right")
                     .font(.system(size: 24,weight: .bold))
-                    .foregroundColor(.brown)
+                    .foregroundColor(.brown.opacity(textChecker() ? 1.0 : 0.0))
                     .padding()
-                    .background(Circle().foregroundColor(.primary))
-                    .disabled(textChecker())
+                    .background(
+                        Circle().foregroundColor(.primary.opacity(
+                            textChecker() ? 1.0 : 0.0)))
             }
             .frame(maxWidth:.infinity,alignment: .center)
             .padding(.top,10)
