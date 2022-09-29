@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MealsListView: View {
-    @State var name:String
-    @State var image:String
+    @Binding var name:String
+    @Binding var image:String
     @State var alertShow:Bool = false
     
     @EnvironmentObject var vm : MealViewModel
@@ -101,7 +101,7 @@ struct MealsListView: View {
 
 struct MealsListView_Previews: PreviewProvider {
     static var previews: some View {
-        MealsListView(name: "", image: "")
+        MealsListView(name: .constant(""), image: .constant(""))
             .environmentObject(MealViewModel())
     }
 }

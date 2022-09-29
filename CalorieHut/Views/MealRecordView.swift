@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealRecordView: View {
     @EnvironmentObject var vm : MealViewModel
-    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         NavigationView{
             ZStack {
@@ -66,7 +66,7 @@ extension MealRecordView {
     
     private var backButton: some View{
         Button{
-            vm.showMealsEatenList.toggle()
+            dismiss.callAsFunction()
         } label:{
             Image(systemName: "xmark")
                 .font(.headline)

@@ -14,6 +14,7 @@ struct CategoryGridView: View {
     
     @State var categoryName:String = ""
     @State var catImage:String = ""
+    @State var showList:Bool = false
     
     @EnvironmentObject var vm : MealViewModel
     
@@ -27,7 +28,7 @@ struct CategoryGridView: View {
                     LazyVGrid(columns:columns){
                         ForEach(vm.categorylist){ cat in
                             Button{
-                                vm.showMealSheet.toggle()
+                                showList.toggle()
                                 categoryName = cat.title
                                 catImage = cat.image
                             }label: {
@@ -47,9 +48,9 @@ struct CategoryGridView: View {
                                 .cornerRadius(20)
                                 
                             }
-                            .sheet(isPresented: $vm.showMealSheet, content: {
+                            .sheet(isPresented: $showList, content: {
                                 VStack{
-                                    MealsListView(name: categoryName, image: catImage)
+                                    MealsListView(name: $categoryName, image: $catImage)
                                 }
                             })
                         }
