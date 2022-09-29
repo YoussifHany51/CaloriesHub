@@ -493,18 +493,18 @@ class MealViewModel: ObservableObject{
     
     //MARK: CategoryList
     @Published var categorylist: [Category] = [
-        Category(title: "Fruit", image: "Fruit"), //
-        Category(title: "Beef & Chicken", image: "Beef"), //
-        Category(title: "Fast Food", image: "fastFood"), //
-        Category(title: "Vegetable", image: "Vegtable"), //
-        Category(title: "Pasta", image: "Pasta"), //
-        Category(title: "Dessert", image: "Dessert"), //
-        Category(title: "Hot Drinks", image: "HotDrink"), //
-        Category(title: "Cold Drinks", image: "ColdDrink"), //
-        Category(title: "Dairy", image: "Dairy"), //
-        Category(title: "Pastries", image: "Pastries"), //
-        Category(title: "Nuts", image: "Nuts"), //
-        Category(title: "SeaFood", image: "SeaFood"), //
+        Category(title: "Fruit", image: "Fruit"),
+        Category(title: "Beef & Chicken", image: "Beef"),
+        Category(title: "Fast Food", image: "FastFood"),
+        Category(title: "Vegetable", image: "Vegetable"),
+        Category(title: "Pasta", image: "Pasta"),
+        Category(title: "Dessert", image: "Dessert"),
+        Category(title: "Hot Drinks", image: "HotDrink"),
+        Category(title: "Cold Drinks", image: "ColdDrink"),
+        Category(title: "Dairy", image: "Dairy"),
+        Category(title: "Pastries", image: "Pastries"),
+        Category(title: "Nuts", image: "Nuts"),
+        Category(title: "SeaFood", image: "SeaFood"),
         ]
     
     //MARK: Meal List Checker
@@ -578,8 +578,6 @@ class MealViewModel: ObservableObject{
     }
    
     
-    @Published var showMealsEatenList: Bool = false
-    @Published var showMealSheet:Bool = false
     @Published var userDailyCal:String = ""
     @Published var searchText:String = ""
     @Published var date = Date()

@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: MealViewModel
-    
+    @State private var showList:Bool = false
     var body: some View {
         NavigationView {
             ZStack{
@@ -34,7 +34,7 @@ struct HomeView: View {
                 }
                Spacer()
             }
-            .sheet(isPresented: $vm.showMealsEatenList, content: {
+            .sheet(isPresented: $showList, content: {
                 MealRecordView()
             })
             .navigationTitle("")
@@ -75,7 +75,7 @@ extension HomeView{
     
     private var MealListButton: some View{
         Button{
-            vm.showMealsEatenList.toggle()
+            showList.toggle()
         }label: {
             MealsRecordButton()
         }
