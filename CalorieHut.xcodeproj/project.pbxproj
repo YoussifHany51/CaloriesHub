@@ -22,8 +22,8 @@
 		09AF6DA127FB81B600D344BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */; };
 		09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAA27FB81FA00D344BF /* HomeView.swift */; };
 		09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAC27FB869200D344BF /* ProgressRingView.swift */; };
-		09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */; };
 		09AF6DB727FBA69000D344BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DB627FBA69000D344BF /* MainView.swift */; };
+		09CAF3A328EF2D830006E30A /*  ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAF3A228EF2D830006E30A /*  ProgressCircleView.swift */; };
 		09D88869280310D50024B039 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D88868280310D50024B039 /* CalculatorView.swift */; };
 		09E7C8E327FC968C00153CD9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E227FC968C00153CD9 /* Category.swift */; };
 		09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */; };
@@ -63,8 +63,8 @@
 		09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09AF6DAA27FB81FA00D344BF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09AF6DAC27FB869200D344BF /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
-		09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		09AF6DB627FBA69000D344BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09CAF3A228EF2D830006E30A /*  ProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " ProgressCircleView.swift"; sourceTree = "<group>"; };
 		09D88868280310D50024B039 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		09E7C8E227FC968C00153CD9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			children = (
 				0965BDFE28D0DFD2007DB21A /* SearchBarView.swift */,
 				09AF6DAC27FB869200D344BF /* ProgressRingView.swift */,
-				09AF6DAE27FB8A4C00D344BF /* ProgressCircleView.swift */,
+				09CAF3A228EF2D830006E30A /*  ProgressCircleView.swift */,
 				0965BDFA28BBC696007DB21A /* MealsRecordButton.swift */,
 			);
 			path = Components;
@@ -308,12 +308,12 @@
 			files = (
 				0965BDFD28BD0E87007DB21A /* CustomMealView.swift in Sources */,
 				09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */,
+				09CAF3A328EF2D830006E30A /*  ProgressCircleView.swift in Sources */,
 				09D88869280310D50024B039 /* CalculatorView.swift in Sources */,
 				09446D3D2815F31200B295E7 /* MealRecordView.swift in Sources */,
 				09E7C8E927FCEE8F00153CD9 /* MealViewModel.swift in Sources */,
 				0986372E2825C50600516CF7 /* TabBarView.swift in Sources */,
 				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
-				09AF6DAF27FB8A4C00D344BF /* ProgressCircleView.swift in Sources */,
 				09ECA8E7280F71F700F24966 /* HapticSoundManager.swift in Sources */,
 				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
 				0965BDFF28D0DFD3007DB21A /* SearchBarView.swift in Sources */,

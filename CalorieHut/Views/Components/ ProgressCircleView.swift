@@ -21,10 +21,9 @@ struct ProgressCircleView: View {
         ZStack{
             WaterWave(
                 
-                progress: vm.userKcal.isEmpty ? 0 :
+                progress:  vm.userKcal.isEmpty ? 0 :
                    (Double(vm.getCountKcal()) /
                    (Double(vm.userKcal) ?? 0.0)),
-//                progress:0.5,
                 waveHeight: 0.03,
                 offset: startAnimation)
                 .fill(Color.blue)
@@ -68,7 +67,7 @@ struct ProgressCircleView: View {
         }
         .frame(width: size.width, height: size.height, alignment: .center)
         .onAppear{
-            withAnimation(.linear(duration: 2).repeatForever(autoreverses: false)){
+            withAnimation(.linear(duration: 2).repeatForever(autoreverses: true)){
                 startAnimation = size.width
             }
 //            progress = min(Double(vm.getCountKcal()) / (Double(vm.userKcal) ?? 0.0) , 1.0)
