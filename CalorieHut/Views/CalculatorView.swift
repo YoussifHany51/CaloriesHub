@@ -52,39 +52,41 @@ struct CalculatorView: View {
                 Color(.systemBrown).opacity(0.5)
                     .ignoresSafeArea()
                 
-                VStack{
+                ScrollView {
                     VStack{
-                        
-                        InfoButton
-                        TextFieldInputs_CalcButton
-                        Button{
-                            kcalCalculator(gender: gender,
-                                           activity: activity)
+                        VStack{
                             
-                            resetTextField()
-                            
-                            showAlert.toggle()
-                        }label: {
-                            Text("Calculate")
-                                .foregroundColor(.white)
-                                .font(.headline)
-                                .frame(height:55)
-                                .frame(maxWidth:120)
-                                .background(textFieldisValid() ?
-                                            Color.accentColor : Color.gray)
-                                .cornerRadius(10)
-                                .padding()
+                            InfoButton
+                            TextFieldInputs_CalcButton
+                            Button{
+                                kcalCalculator(gender: gender,
+                                               activity: activity)
+                                
+                                resetTextField()
+                                
+                                showAlert.toggle()
+                            }label: {
+                                Text("Calculate")
+                                    .foregroundColor(.white)
+                                    .font(.headline)
+                                    .frame(height:55)
+                                    .frame(maxWidth:120)
+                                    .background(textFieldisValid() ?
+                                                Color.accentColor : Color.gray)
+                                    .cornerRadius(10)
+                                    .padding()
+                            }
+                            .disabled(!textFieldisValid())
+                            .alert("Recommended daily calories:", isPresented: $showAlert, actions: {
+                                
+                            }, message: {
+                                Text("\(vm.userDailyCal) kcal")
+                            })
+                           TargetUserKcalSection
                         }
-                        .disabled(!textFieldisValid())
-                        .alert("Recommended daily calories:", isPresented: $showAlert, actions: {
-                            
-                        }, message: {
-                            Text("\(vm.userDailyCal) kcal")
-                        })
-                       TargetUserKcalSection
+                        .padding()
+                        Spacer()
                     }
-                    .padding()
-                    Spacer()
                 }
             }
             .onTapGesture {
@@ -159,6 +161,13 @@ struct CalculatorView: View {
     
     func textFieldisValid()->Bool{
         if(age.count<2 || weight.count<2 || height.count<3){
+            return false
+        }
+        return true
+    }
+    
+    func directKcalTextFieldValidation()->Bool{
+        if(userTargetKcal.count<3){
             return false
         }
         return true
@@ -262,7 +271,7 @@ extension CalculatorView{
                 .cornerRadius(10)
                 .font(.headline)
                 .keyboardType(.decimalPad)
-            if !userTargetKcal.isEmpty{
+            if directKcalTextFieldValidation(){
                 Button{
                     vm.userDailyCal = userTargetKcal
                     vm.addKcal(kcal: vm.userDailyCal)
