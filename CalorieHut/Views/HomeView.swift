@@ -32,12 +32,11 @@ struct HomeView: View {
                     MealListButton
                     Spacer()
                 }
-               Spacer()
             }
             .sheet(isPresented: $showList, content: {
                 MealRecordView()
             })
-            .navigationTitle("")
+            .navigationTitle("Hello 👋")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
@@ -50,11 +49,11 @@ struct HomeView: View {
                             .underline()
                     })
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Text("Hello 👋")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                }
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Text("Hello 👋")
+//                        .font(.title2)
+//                        .fontWeight(.semibold)
+//                }
             }
         }
         .frame(width:UIScreen.main.bounds.width)
