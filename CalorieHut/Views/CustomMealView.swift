@@ -25,13 +25,15 @@ struct CustomMealView: View {
         ZStack {
             Color(.systemBrown).opacity(0.5)
                 .ignoresSafeArea()
-            VStack {
-                CirclesHeader
-                    .frame(maxHeight:getRect().width)
-                TextField_NextButton
-                    .padding()
-                    .padding(.top,-maxCircleHeight / 1.5)
-                    .frame(maxHeight:.infinity,alignment: .top)
+            ScrollView {
+                VStack {
+//                    CirclesHeader
+//                        .frame(maxHeight:getRect().width)
+                    TextField_NextButton
+                        .padding()
+                        .padding(.top,-maxCircleHeight / 1.5)
+                        .frame(maxHeight:.infinity,alignment: .top)
+                }
             }
         }
         .onTapGesture {

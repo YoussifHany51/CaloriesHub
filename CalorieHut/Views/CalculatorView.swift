@@ -86,6 +86,15 @@ struct CalculatorView: View {
                         }
                         .padding()
                         Spacer()
+                        Rectangle()
+                            .frame(height:40)
+                            .opacity(0)
+                        Rectangle()
+                            .frame(height:40)
+                            .opacity(0)
+                        Rectangle()
+                            .frame(height:40)
+                            .opacity(0)
                     }
                 }
             }
@@ -210,7 +219,7 @@ extension CalculatorView{
             
             TextField("Age",text: $age)
                 .padding(.horizontal)
-                .frame(height:55)
+                .frame(height:45)
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
@@ -218,7 +227,7 @@ extension CalculatorView{
             
             TextField("Height",text: $height)
                 .padding(.horizontal)
-                .frame(height:55)
+                .frame(height:45)
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
@@ -226,7 +235,7 @@ extension CalculatorView{
             
             TextField("Weight",text: $weight)
                 .padding(.horizontal)
-                .frame(height:55)
+                .frame(height:45)
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
                 .font(.title)
