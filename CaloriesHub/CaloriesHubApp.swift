@@ -1,6 +1,6 @@
 //
-//  CalorieHutApp.swift
-//  CalorieHut
+//  CaloriesHubApp.swift
+//  CaloriesHub
 //
 //  Created by Youssif Hany on 04/04/2022.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CalorieHutApp: App {
+struct CaloriesHubApp: App {
     init(){
         NotificationManager.instance.requestAuthorization()
     }

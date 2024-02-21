@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09AF6D9527FB81B400D344BF"
                BuildableName = "Calorie Hut.app"
-               BlueprintName = "CalorieHut"
-               ReferencedContainer = "container:CalorieHut.xcodeproj">
+               BlueprintName = "CaloriesHub"
+               ReferencedContainer = "container:CaloriesHub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "093B3D23281CD18F009DF71E"
-               BuildableName = "CalorieHutTests.xctest"
-               BlueprintName = "CalorieHutTests"
-               ReferencedContainer = "container:CalorieHut.xcodeproj">
+               BuildableName = "CaloriesHubTests.xctest"
+               BlueprintName = "CaloriesHubTests"
+               ReferencedContainer = "container:CaloriesHub.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,8 +56,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09AF6D9527FB81B400D344BF"
             BuildableName = "Calorie Hut.app"
-            BlueprintName = "CalorieHut"
-            ReferencedContainer = "container:CalorieHut.xcodeproj">
+            BlueprintName = "CaloriesHub"
+            ReferencedContainer = "container:CaloriesHub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,8 +73,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09AF6D9527FB81B400D344BF"
             BuildableName = "Calorie Hut.app"
-            BlueprintName = "CalorieHut"
-            ReferencedContainer = "container:CalorieHut.xcodeproj">
+            BlueprintName = "CaloriesHub"
+            ReferencedContainer = "container:CaloriesHub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

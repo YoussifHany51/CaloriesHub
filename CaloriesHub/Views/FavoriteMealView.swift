@@ -1,6 +1,6 @@
 //
 //  FavoriteMealView.swift
-//  CalorieHut
+//  CaloriesHub
 //
 //  Created by Youssif Hany on 09/04/2022.
 //

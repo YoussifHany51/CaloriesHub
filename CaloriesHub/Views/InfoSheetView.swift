@@ -1,6 +1,6 @@
 //
 //  InfoSheetView.swift
-//  CalorieHut
+//  CaloriesHub
 //
 //  Created by Youssif Hany on 20/04/2022.
 //

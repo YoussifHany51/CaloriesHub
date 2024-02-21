@@ -1,6 +1,6 @@
 //
 //  ProgressCircleView.swift
-//  CalorieHut
+//  CaloriesHub
 //
 //  Created by Youssif Hany on 04/04/2022.
 //

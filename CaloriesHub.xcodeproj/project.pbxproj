@@ -17,7 +17,7 @@
 		0986372E2825C50600516CF7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372D2825C50600516CF7 /* TabBarView.swift */; };
 		098637302825C56500516CF7 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986372F2825C56500516CF7 /* TabBarViewModel.swift */; };
 		09A10EB0281053D500BAD70E /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A10EAF281053D500BAD70E /* InfoSheetView.swift */; };
-		09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */; };
+		09AF6D9A27FB81B400D344BF /* CaloriesHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6D9927FB81B400D344BF /* CaloriesHubApp.swift */; };
 		09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6D9D27FB81B600D344BF /* Assets.xcassets */; };
 		09AF6DA127FB81B600D344BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */; };
 		09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAA27FB81FA00D344BF /* HomeView.swift */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMealView.swift; sourceTree = "<group>"; };
-		093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieHutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		093B3D24281CD18F009DF71E /* CaloriesHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaloriesHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		093B3D26281CD190009DF71E /* CalorieHutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutTests.swift; sourceTree = "<group>"; };
 		09446D36281584FE00B295E7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09446D3C2815F31200B295E7 /* MealRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecordView.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		0986372F2825C56500516CF7 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		09A10EAF281053D500BAD70E /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
 		09AF6D9627FB81B400D344BF /* Calorie Hut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Hut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieHutApp.swift; sourceTree = "<group>"; };
+		09AF6D9927FB81B400D344BF /* CaloriesHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesHubApp.swift; sourceTree = "<group>"; };
 		09AF6D9D27FB81B600D344BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09AF6DA027FB81B600D344BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09AF6DAA27FB81FA00D344BF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -94,12 +94,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		093B3D25281CD18F009DF71E /* CalorieHutTests */ = {
+		093B3D25281CD18F009DF71E /* CaloriesHubTests */ = {
 			isa = PBXGroup;
 			children = (
 				093B3D26281CD190009DF71E /* CalorieHutTests.swift */,
 			);
-			path = CalorieHutTests;
+			path = CaloriesHubTests;
 			sourceTree = "<group>";
 		};
 		0965BDF928BBC66D007DB21A /* Components */ = {
@@ -116,8 +116,8 @@
 		09AF6D8D27FB81B400D344BF = {
 			isa = PBXGroup;
 			children = (
-				09AF6D9827FB81B400D344BF /* CalorieHut */,
-				093B3D25281CD18F009DF71E /* CalorieHutTests */,
+				09AF6D9827FB81B400D344BF /* CaloriesHub */,
+				093B3D25281CD18F009DF71E /* CaloriesHubTests */,
 				09AF6D9727FB81B400D344BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,22 +126,22 @@
 			isa = PBXGroup;
 			children = (
 				09AF6D9627FB81B400D344BF /* Calorie Hut.app */,
-				093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */,
+				093B3D24281CD18F009DF71E /* CaloriesHubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09AF6D9827FB81B400D344BF /* CalorieHut */ = {
+		09AF6D9827FB81B400D344BF /* CaloriesHub */ = {
 			isa = PBXGroup;
 			children = (
-				09AF6D9927FB81B400D344BF /* CalorieHutApp.swift */,
+				09AF6D9927FB81B400D344BF /* CaloriesHubApp.swift */,
 				09AF6DA927FB81E800D344BF /* ViewModel */,
 				09AF6DA827FB81E100D344BF /* Model */,
 				09AF6DA727FB81DA00D344BF /* Views */,
 				09AF6D9D27FB81B600D344BF /* Assets.xcassets */,
 				09AF6D9F27FB81B600D344BF /* Preview Content */,
 			);
-			path = CalorieHut;
+			path = CaloriesHub;
 			sourceTree = "<group>";
 		};
 		09AF6D9F27FB81B600D344BF /* Preview Content */ = {
@@ -195,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		093B3D23281CD18F009DF71E /* CalorieHutTests */ = {
+		093B3D23281CD18F009DF71E /* CaloriesHubTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CalorieHutTests" */;
+			buildConfigurationList = 093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CaloriesHubTests" */;
 			buildPhases = (
 				093B3D20281CD18F009DF71E /* Sources */,
 				093B3D21281CD18F009DF71E /* Frameworks */,
@@ -208,14 +208,14 @@
 			dependencies = (
 				093B3D29281CD190009DF71E /* PBXTargetDependency */,
 			);
-			name = CalorieHutTests;
+			name = CaloriesHubTests;
 			productName = CalorieHutTests;
-			productReference = 093B3D24281CD18F009DF71E /* CalorieHutTests.xctest */;
+			productReference = 093B3D24281CD18F009DF71E /* CaloriesHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		09AF6D9527FB81B400D344BF /* CalorieHut */ = {
+		09AF6D9527FB81B400D344BF /* CaloriesHub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09AF6DA427FB81B600D344BF /* Build configuration list for PBXNativeTarget "CalorieHut" */;
+			buildConfigurationList = 09AF6DA427FB81B600D344BF /* Build configuration list for PBXNativeTarget "CaloriesHub" */;
 			buildPhases = (
 				09AF6D9227FB81B400D344BF /* Sources */,
 				09AF6D9327FB81B400D344BF /* Frameworks */,
@@ -225,7 +225,7 @@
 			);
 			dependencies = (
 			);
-			name = CalorieHut;
+			name = CaloriesHub;
 			packageProductDependencies = (
 			);
 			productName = CalorieHut;
@@ -251,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 09AF6D9127FB81B400D344BF /* Build configuration list for PBXProject "CalorieHut" */;
+			buildConfigurationList = 09AF6D9127FB81B400D344BF /* Build configuration list for PBXProject "CaloriesHub" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,8 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09AF6D9527FB81B400D344BF /* CalorieHut */,
-				093B3D23281CD18F009DF71E /* CalorieHutTests */,
+				09AF6D9527FB81B400D344BF /* CaloriesHub */,
+				093B3D23281CD18F009DF71E /* CaloriesHubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +315,7 @@
 				0986372E2825C50600516CF7 /* TabBarView.swift in Sources */,
 				09AF6DAB27FB81FA00D344BF /* HomeView.swift in Sources */,
 				09ECA8E7280F71F700F24966 /* HapticSoundManager.swift in Sources */,
-				09AF6D9A27FB81B400D344BF /* CalorieHutApp.swift in Sources */,
+				09AF6D9A27FB81B400D344BF /* CaloriesHubApp.swift in Sources */,
 				0965BDFF28D0DFD3007DB21A /* SearchBarView.swift in Sources */,
 				09E7C8E727FCE96B00153CD9 /* Meal.swift in Sources */,
 				09AF6DB727FBA69000D344BF /* MainView.swift in Sources */,
@@ -335,7 +335,7 @@
 /* Begin PBXTargetDependency section */
 		093B3D29281CD190009DF71E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 09AF6D9527FB81B400D344BF /* CalorieHut */;
+			target = 09AF6D9527FB81B400D344BF /* CaloriesHub */;
 			targetProxy = 093B3D28281CD190009DF71E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -351,7 +351,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -370,7 +370,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -502,7 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.1;
-				DEVELOPMENT_ASSET_PATHS = "\"CalorieHut/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CaloriesHub/Preview Content\"";
 				DEVELOPMENT_TEAM = QWLH47G69C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -514,13 +514,13 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHub;
 				PRODUCT_NAME = "Calorie Hut";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -535,7 +535,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.1;
-				DEVELOPMENT_ASSET_PATHS = "\"CalorieHut/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CaloriesHub/Preview Content\"";
 				DEVELOPMENT_TEAM = QWLH47G69C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -547,13 +547,13 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CalorieHut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHub;
 				PRODUCT_NAME = "Calorie Hut";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -564,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CalorieHutTests" */ = {
+		093B3D2C281CD190009DF71E /* Build configuration list for PBXNativeTarget "CaloriesHubTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				093B3D2A281CD190009DF71E /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09AF6D9127FB81B400D344BF /* Build configuration list for PBXProject "CalorieHut" */ = {
+		09AF6D9127FB81B400D344BF /* Build configuration list for PBXProject "CaloriesHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09AF6DA227FB81B600D344BF /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09AF6DA427FB81B600D344BF /* Build configuration list for PBXNativeTarget "CalorieHut" */ = {
+		09AF6DA427FB81B600D344BF /* Build configuration list for PBXNativeTarget "CaloriesHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09AF6DA527FB81B600D344BF /* Debug */,

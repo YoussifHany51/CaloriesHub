@@ -1,6 +1,6 @@
 //
-//  CalorieHutTests.swift
-//  CalorieHutTests
+//  CaloriesHubTests.swift
+//  CaloriesHubTests
 //
 //  Created by Youssif Hany on 30/04/2022.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Calorie_Hut
 
-class CalorieHutTests: XCTestCase {
+class CaloriesHubTests: XCTestCase {
 
     var sut: MealViewModel?
     
@@ -24,7 +24,7 @@ class CalorieHutTests: XCTestCase {
     }
 
     func testAddMeal(){
-        sut?.addMeal(name: "Apple", kcal: 15, quantity: 1, unit: "g")
+        sut?.addMeal(name: "Apple", kcal: 15, quantity: 1, unit: "g", date: Date())
         XCTAssertEqual(sut?.meals.first?.name, "Apple")
         XCTAssertEqual(sut?.meals.first?.kcal, 15)
         XCTAssertEqual(sut?.meals.first?.quantity, 1)
@@ -37,7 +37,7 @@ class CalorieHutTests: XCTestCase {
     }
     
     func testAddMealToFav(){
-        sut?.addMealToFav(name: "Orange", kcal: 10, quantity: 1, unit: "g")
+        sut?.addMealToFav(name: "Orange", kcal: 10, quantity: 1, unit: "g", date: Date())
         XCTAssertEqual(sut?.favoriteMeals.first?.kcal, 10)
         XCTAssertEqual(sut?.favoriteMeals.first?.quantity, 1)
         XCTAssertEqual(sut?.favoriteMeals.first?.unit, "g")
