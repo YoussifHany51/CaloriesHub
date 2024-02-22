@@ -24,6 +24,13 @@
 		09AF6DAD27FB869200D344BF /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DAC27FB869200D344BF /* ProgressRingView.swift */; };
 		09AF6DB727FBA69000D344BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF6DB627FBA69000D344BF /* MainView.swift */; };
 		09CAF3A328EF2D830006E30A /*  ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAF3A228EF2D830006E30A /*  ProgressCircleView.swift */; };
+		09D414C52B86B9F40009EC25 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D414C42B86B9F30009EC25 /* WidgetKit.framework */; };
+		09D414C72B86B9F40009EC25 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D414C62B86B9F40009EC25 /* SwiftUI.framework */; };
+		09D414CA2B86B9F40009EC25 /* widgetExtentionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D414C92B86B9F40009EC25 /* widgetExtentionBundle.swift */; };
+		09D414CC2B86B9F40009EC25 /* widgetExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D414CB2B86B9F40009EC25 /* widgetExtention.swift */; };
+		09D414CE2B86B9F70009EC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D414CD2B86B9F70009EC25 /* Assets.xcassets */; };
+		09D414D22B86B9F70009EC25 /* widgetExtentionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 09D414C22B86B9F30009EC25 /* widgetExtentionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09D414DA2B86C43A0009EC25 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D414D92B86C4390009EC25 /* DataService.swift */; };
 		09D88869280310D50024B039 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D88868280310D50024B039 /* CalculatorView.swift */; };
 		09E7C8E327FC968C00153CD9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E227FC968C00153CD9 /* Category.swift */; };
 		09E7C8E527FC97C200153CD9 /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */; };
@@ -43,7 +50,28 @@
 			remoteGlobalIDString = 09AF6D9527FB81B400D344BF;
 			remoteInfo = CalorieHut;
 		};
+		09D414D02B86B9F70009EC25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09AF6D8E27FB81B400D344BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09D414C12B86B9F30009EC25;
+			remoteInfo = widgetExtentionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09D414D32B86B9F70009EC25 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				09D414D22B86B9F70009EC25 /* widgetExtentionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		093A3BC02800FECA00AFA704 /* FavoriteMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMealView.swift; sourceTree = "<group>"; };
@@ -65,6 +93,16 @@
 		09AF6DAC27FB869200D344BF /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		09AF6DB627FBA69000D344BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		09CAF3A228EF2D830006E30A /*  ProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " ProgressCircleView.swift"; sourceTree = "<group>"; };
+		09D414C22B86B9F30009EC25 /* widgetExtentionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtentionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		09D414C42B86B9F30009EC25 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		09D414C62B86B9F40009EC25 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		09D414C92B86B9F40009EC25 /* widgetExtentionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetExtentionBundle.swift; sourceTree = "<group>"; };
+		09D414CB2B86B9F40009EC25 /* widgetExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetExtention.swift; sourceTree = "<group>"; };
+		09D414CD2B86B9F70009EC25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09D414CF2B86B9F70009EC25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D414D72B86C0050009EC25 /* CaloriesHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaloriesHub.entitlements; sourceTree = "<group>"; };
+		09D414D82B86C06B0009EC25 /* widgetExtentionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtentionExtension.entitlements; sourceTree = "<group>"; };
+		09D414D92B86C4390009EC25 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		09D88868280310D50024B039 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		09E7C8E227FC968C00153CD9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		09E7C8E427FC97C200153CD9 /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
@@ -88,6 +126,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09D414BF2B86B9F30009EC25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09D414C72B86B9F40009EC25 /* SwiftUI.framework in Frameworks */,
+				09D414C52B86B9F40009EC25 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +163,11 @@
 		09AF6D8D27FB81B400D344BF = {
 			isa = PBXGroup;
 			children = (
+				09D414D82B86C06B0009EC25 /* widgetExtentionExtension.entitlements */,
 				09AF6D9827FB81B400D344BF /* CaloriesHub */,
 				093B3D25281CD18F009DF71E /* CaloriesHubTests */,
+				09D414C82B86B9F40009EC25 /* widgetExtention */,
+				09D414C32B86B9F30009EC25 /* Frameworks */,
 				09AF6D9727FB81B400D344BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +177,7 @@
 			children = (
 				09AF6D9627FB81B400D344BF /* Calorie Hut.app */,
 				093B3D24281CD18F009DF71E /* CaloriesHubTests.xctest */,
+				09D414C22B86B9F30009EC25 /* widgetExtentionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +185,7 @@
 		09AF6D9827FB81B400D344BF /* CaloriesHub */ = {
 			isa = PBXGroup;
 			children = (
+				09D414D72B86C0050009EC25 /* CaloriesHub.entitlements */,
 				09AF6D9927FB81B400D344BF /* CaloriesHubApp.swift */,
 				09AF6DA927FB81E800D344BF /* ViewModel */,
 				09AF6DA827FB81E100D344BF /* Model */,
@@ -192,6 +244,27 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		09D414C32B86B9F30009EC25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09D414C42B86B9F30009EC25 /* WidgetKit.framework */,
+				09D414C62B86B9F40009EC25 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09D414C82B86B9F40009EC25 /* widgetExtention */ = {
+			isa = PBXGroup;
+			children = (
+				09D414C92B86B9F40009EC25 /* widgetExtentionBundle.swift */,
+				09D414CB2B86B9F40009EC25 /* widgetExtention.swift */,
+				09D414D92B86C4390009EC25 /* DataService.swift */,
+				09D414CD2B86B9F70009EC25 /* Assets.xcassets */,
+				09D414CF2B86B9F70009EC25 /* Info.plist */,
+			);
+			path = widgetExtention;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,10 +293,12 @@
 				09AF6D9227FB81B400D344BF /* Sources */,
 				09AF6D9327FB81B400D344BF /* Frameworks */,
 				09AF6D9427FB81B400D344BF /* Resources */,
+				09D414D32B86B9F70009EC25 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				09D414D12B86B9F70009EC25 /* PBXTargetDependency */,
 			);
 			name = CaloriesHub;
 			packageProductDependencies = (
@@ -232,6 +307,23 @@
 			productReference = 09AF6D9627FB81B400D344BF /* Calorie Hut.app */;
 			productType = "com.apple.product-type.application";
 		};
+		09D414C12B86B9F30009EC25 /* widgetExtentionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09D414D62B86B9F70009EC25 /* Build configuration list for PBXNativeTarget "widgetExtentionExtension" */;
+			buildPhases = (
+				09D414BE2B86B9F30009EC25 /* Sources */,
+				09D414BF2B86B9F30009EC25 /* Frameworks */,
+				09D414C02B86B9F30009EC25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = widgetExtentionExtension;
+			productName = widgetExtentionExtension;
+			productReference = 09D414C22B86B9F30009EC25 /* widgetExtentionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,7 +331,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					093B3D23281CD18F009DF71E = {
@@ -248,6 +340,9 @@
 					};
 					09AF6D9527FB81B400D344BF = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					09D414C12B86B9F30009EC25 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -267,6 +362,7 @@
 			projectRoot = "";
 			targets = (
 				09AF6D9527FB81B400D344BF /* CaloriesHub */,
+				09D414C12B86B9F30009EC25 /* widgetExtentionExtension */,
 				093B3D23281CD18F009DF71E /* CaloriesHubTests */,
 			);
 		};
@@ -288,6 +384,14 @@
 				09446D37281584FE00B295E7 /* LaunchScreen.storyboard in Resources */,
 				09AF6D9E27FB81B600D344BF /* Assets.xcassets in Resources */,
 				09ECA8E9280F75A800F24966 /* ding.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09D414C02B86B9F30009EC25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09D414CE2B86B9F70009EC25 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +434,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09D414BE2B86B9F30009EC25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09D414DA2B86C43A0009EC25 /* DataService.swift in Sources */,
+				09D414CC2B86B9F40009EC25 /* widgetExtention.swift in Sources */,
+				09D414CA2B86B9F40009EC25 /* widgetExtentionBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -337,6 +451,11 @@
 			isa = PBXTargetDependency;
 			target = 09AF6D9527FB81B400D344BF /* CaloriesHub */;
 			targetProxy = 093B3D28281CD190009DF71E /* PBXContainerItemProxy */;
+		};
+		09D414D12B86B9F70009EC25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09D414C12B86B9F30009EC25 /* widgetExtentionExtension */;
+			targetProxy = 09D414D02B86B9F70009EC25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,8 +617,10 @@
 		09AF6DA527FB81B600D344BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaloriesHub/CaloriesHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesHub/Preview Content\"";
@@ -531,8 +652,10 @@
 		09AF6DA627FB81B600D344BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaloriesHub/CaloriesHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloriesHub/Preview Content\"";
@@ -558,6 +681,73 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		09D414D42B86B9F70009EC25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = widgetExtentionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWLH47G69C;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widgetExtention/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widgetExtention;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHub.widgetExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09D414D52B86B9F70009EC25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = widgetExtentionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWLH47G69C;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widgetExtention/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widgetExtention;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youssif.CaloriesHub.widgetExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -587,6 +777,15 @@
 			buildConfigurations = (
 				09AF6DA527FB81B600D344BF /* Debug */,
 				09AF6DA627FB81B600D344BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09D414D62B86B9F70009EC25 /* Build configuration list for PBXNativeTarget "widgetExtentionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09D414D42B86B9F70009EC25 /* Debug */,
+				09D414D52B86B9F70009EC25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

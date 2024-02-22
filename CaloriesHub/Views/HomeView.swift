@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 
 struct HomeView: View {
+    
+    @AppStorage("progressAppStorge",
+    store: UserDefaults(suiteName: "group.com.youssif.calorieshub"))
+    var progressAppStorge = ""    
     
     @EnvironmentObject private var vm: MealViewModel
     @State private var showList:Bool = false
@@ -95,6 +100,10 @@ extension HomeView{
                     .font(.body)
 
             }
+            .onAppear(perform: {
+                progressAppStorge = String(format: "%.0f",vm.userKcal.isEmpty ? 0: (Double(vm.userKcal) ?? 0) - vm.getCountKcal())
+                WidgetCenter.shared.reloadTimelines(ofKind: "widgetExtention")
+            })
         }
     }
 }

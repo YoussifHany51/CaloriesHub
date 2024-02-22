@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct MealRecordView: View {
     @EnvironmentObject var vm : MealViewModel
@@ -42,7 +43,11 @@ struct MealRecordView: View {
                                 .listRowBackground(Color.clear)
                             }
                         }
-                        .onDelete(perform: vm.deleteMeal)
+//                        .onDelete(perform: vm.deleteMeal)
+                        .onDelete(perform: { indexSet in
+                            vm.deleteMeal(indexSet: indexSet)
+                            WidgetCenter.shared.reloadTimelines(ofKind: "widgetExtention")
+                        })
                         .onMove(perform: vm.moveMeal)
                     }
                     .navigationTitle("Meals's record")

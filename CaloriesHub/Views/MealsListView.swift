@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct MealsListView: View {
     @Binding var name:String
@@ -82,6 +83,7 @@ struct MealsListView: View {
                                 
 //                                HapticSoundManager.instance.playSound()
                                 HapticSoundManager.instance.vibrationHaptic(type: .success)
+                                WidgetCenter.shared.reloadTimelines(ofKind: "widgetExtention")
                                 print("Added")
                             }label: {
                                 Image(systemName: "plus")
