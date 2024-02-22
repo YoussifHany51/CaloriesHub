@@ -495,7 +495,7 @@ class MealViewModel: ObservableObject{
     @Published var categorylist: [Category] = [
         Category(title: "Fruit", image: "Fruit"),
         Category(title: "Beef & Chicken", image: "Beef"),
-        Category(title: "Fast Food", image: "FastFood"),
+        Category(title: "Fast Food", image: "fastFood"),
         Category(title: "Vegetable", image: "Vegetable"),
         Category(title: "Pasta", image: "Pasta"),
         Category(title: "Dessert", image: "Dessert"),
