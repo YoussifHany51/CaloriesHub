@@ -49,30 +49,6 @@ struct widgetExtentionEntryView : View {
     
     var body: some View {
         ZStack {
-//            VStack(spacing:10) {
-//                HStack {
-//                    Text("Remainig Kcal:🍕🍖")
-//                        .font(.system(size: 12))
-//                        .foregroundStyle(.red)
-//                        .padding(.top)
-//                    Spacer()
-//                }
-//                Spacer()
-//                Text(data.progress())
-//                    .font(.headline)
-//                    .fontDesign(.serif)
-//                
-//                Spacer()
-//                Text("Tap ME ☺️")
-//                    .foregroundStyle(.white)
-//                    .font(.system(size: 12))
-//                    .fontWeight(.light)
-//                    .frame(height: 55)
-//                    .frame(maxWidth: .infinity)
-//                    .background(Color.blue)
-//                    .clipShape(.capsule)
-//                    .padding(.bottom)
-//            }
             VStack{
                 HStack{
                     Text("⚖️")
