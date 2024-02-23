@@ -49,29 +49,52 @@ struct widgetExtentionEntryView : View {
     
     var body: some View {
         ZStack {
-            VStack(spacing:10) {
-                HStack {
-                    Text("Remainig Kcal:🍕🍖")
-                        .font(.system(size: 12))
-                        .foregroundStyle(.red)
-                        .padding(.top)
+//            VStack(spacing:10) {
+//                HStack {
+//                    Text("Remainig Kcal:🍕🍖")
+//                        .font(.system(size: 12))
+//                        .foregroundStyle(.red)
+//                        .padding(.top)
+//                    Spacer()
+//                }
+//                Spacer()
+//                Text(data.progress())
+//                    .font(.headline)
+//                    .fontDesign(.serif)
+//                
+//                Spacer()
+//                Text("Tap ME ☺️")
+//                    .foregroundStyle(.white)
+//                    .font(.system(size: 12))
+//                    .fontWeight(.light)
+//                    .frame(height: 55)
+//                    .frame(maxWidth: .infinity)
+//                    .background(Color.blue)
+//                    .clipShape(.capsule)
+//                    .padding(.bottom)
+//            }
+            VStack{
+                HStack{
+                    Text("⚖️")
+                        .font(.headline)
+                    Text("Remaining")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .minimumScaleFactor(0.6)
+                        .foregroundStyle(Color.gray.opacity(0.9))
                     Spacer()
                 }
-                Spacer()
-                Text(data.progress())
-                    .font(.headline)
-                    .fontDesign(.serif)
+                HStack {
+                    Text(data.progress())
+                        .font(.system(size: 20,weight: .heavy))
+                    Text("kcal")
+                }
+                .foregroundStyle(Color.white)
+                .padding()
                 
-                Spacer()
                 Text("Tap ME ☺️")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 12))
-                    .fontWeight(.light)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .clipShape(.capsule)
-                    .padding(.bottom)
+                    .minimumScaleFactor(0.6)
+                    .foregroundStyle(Color.gray.opacity(0.9))
             }
         }
     }
